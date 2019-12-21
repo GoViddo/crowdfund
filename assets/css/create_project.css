@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+
+#msform fieldset {
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    
+}
+
+
+#msform textarea {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+}
+
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+
+#msform textarea{
+  display:block;
+    font-weight: 400;
+    background: #343434;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    /* box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2); */
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+.inputtext{
+  display:block;
+    font-weight: 400;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+
+.inputtext:focus{
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    color: #fff;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+.radiobackground{
+    font-weight: 400;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.radiobackground label{
+    margin-bottom: 0;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.space{
+    margin-left:25px !important;
+}
+
+
+.input-error{
+    border: 2px solid red !important;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.progress{
+    margin-top:20px;
+}
+
+.vertical-marker1::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #A355FF;
+}
+
+.vertical-marker {
+    border-left: 5px solid #A355FF;
+    padding-left: 5px;
+}
+
+.field {
+    box-shadow: 4px 4px 4px #222222;
+    background: #343434;
+}
