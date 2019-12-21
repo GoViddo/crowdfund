@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <div id="payment-box">
+        <img src="img/goicon.png" />
+        <h4 class="txt-title">GoViddo Investment Demo</h4>
+        <div class="txt-price">GBP 10</div>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr"
+            method="post" target="_top">
+            <input type='hidden' name='business'
+                value='sb-o4d2j744591@personal.example.com'> <input type='hidden'
+                name='item_name' value='GoViddo Crowdfunding Investment'> <input type='hidden'
+                name='item_number' value='GOV#01'> <input type='hidden'
+                name='amount' value='1'> <input type='hidden'
+                name='no_shipping' value='1'> <input type='hidden'
+                name='currency_code' value='GBP'> 
+                <input type='hidden'
+                name='notify_url'
+                value='https://goviddo.com/crowdfund/notify.php'>
+            
+            <input type='hidden' name='cancel_return'
+                value='http://sitename/paypal-payment-gateway-integration-in-php/cancel.php'>
+            
+            <input type='hidden' name='return'
+                value='http://sitename/paypal-payment-gateway-integration-in-php/return.php'>
+            
+            <input type="hidden" name="cmd" value="_xclick"> <input
+                type="submit" name="pay_now" id="pay_now"
+                Value="Pay Now">
+        </form>
+    </div>
+</body>
+</html>

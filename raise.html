@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/margin_top.css">
+    <link rel="stylesheet" href="assets/css/margin_bottom.css">
+    <link rel="stylesheet" href="assets/css/margin_left.css">
+    <link rel="stylesheet" href="assets/css/margin_right.css">
+    <link rel="stylesheet" href="assets/css/login-register.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+<script src="assets/js/login_modal.js"></script>
+
+
+</head>
+
+<body>
+
+
+    <header></header>
+    <script>
+        fetch("./header.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("header").innerHTML = data;
+    if(window.localStorage.getItem("mypitch_user_login_email") == null)
+    {
+        if(data.indexOf("my_pitch_header_option") !== -1)
+        {
+            //console.log("true");
+            document.getElementById("my_pitch_header_option").style.display = "none";
+            document.getElementById("profile_header_display").style.display = "none";
+            document.getElementById("signout_header_display").style.display = "none";
+            document.getElementById("notification_header_display").style.display = "none";
+            document.getElementById("login_header_display").style.display = "block";
+        }
+    }
+  });
+
+    </script>
+
+ <div class="jumbotron headerbackgroundimg">
+    <div class="container text-center">
+      <div class="hedaer_main_content margintop_10 marginbottom_100">
+        <img src="img/goicon.png" class="img-fluid">
+        <h1 class="my_text_color">CrowdFunding</h1>
+        <p class="my_text_color">Invest or Raise funds for your Project</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <a class="btn btn-invest" id="openmodal_for_project">Start Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <section class="description_1">
+        <div class="row">
+            <div class="col-sm-6 h100">
+                <div class="container text-center">
+                    <div class="jumbotron my_description">
+                        <p class="marginbottom_20">To all the people who want to leave a mark</p>
+                        <p>Lorem dolor sit amet consectetur adipisicing elit sed do eiusmod </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="container">
+                    <img src="img/side_img_1.png" class="img-fluid imgside">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="description_2">
+        <div class="marginleft_20 marginright_20">
+
+            <div id="catlist_recommndation" class="scrolling-wrapper">
+               
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="description_3">
+        <div class="row">
+
+            <div class="col-sm-6">
+                <div class="container">
+                    <img src="img/side_img_1.png" class="img-fluid imgside">
+                </div>
+            </div>
+
+
+            <div class="col-sm-6 h100">
+                <div class="container text-center">
+                    <div class="jumbotron my_description">
+                        <p class="marginbottom_20">To all the people who want to leave a mark</p>
+                        <p>Lorem dolor sit amet consectetur adipisicing elit sed do eiusmod </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+   <footer></footer>
+  
+  <script>
+        fetch("./footer.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+     // console.log(data);
+    document.querySelector("footer").innerHTML = data;
+    
+  });
+
+
+    </script>
+
+
+    		 
+
+</body>
+
+
+<script>
+
+//alert(window.localStorage.getItem("mypitch_user_login_email"));
+
+$("#openmodal_for_project").click(function(){
+    if(window.localStorage.getItem("mypitch_user_login_email") == "" || window.localStorage.getItem("mypitch_user_login_email") == null)
+    {
+        openLoginModal();
+    }
+    else{
+        window.location.href = "create_project.html";
+    }
+});
+
+        $.ajax({
+            type: "GET", //rest Type
+            url: "https://goviddo.online/getIndexProjectList",
+            success: function (msg) {
+               
+                var dataarray = msg.data;
+                var datadisp = "";
+                
+                for(i = 0; i < dataarray.length; i++)
+                {
+                 
+                 datadisp = datadisp + '<div class="card" id="proid_'+dataarray[i].crowdfund_project_id+'">'
+                      +'<a href="invest.html?proid='+dataarray[i].crowdfund_project_id+'">'
+                        +'<img src="'+dataarray[i].crowdfund_project_banner_image+'" class="img-fluid imgmain">'
+                      +'</a>'
+                    +'</div>';
+                    
+                }
+                
+                document.getElementById('catlist_recommndation').innerHTML = datadisp;
+                
+                
+            }
+         });
+         
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear()-15;
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("dateof_birth").setAttribute("max", today);
+
+function create_account()
+{
+    var full_name = $('#name_of_account_holder').val();
+    var emailid = $('#email_register').val();
+    var password = $('#password_register').val();
+    var dob = $('#dateof_birth').val();
+    
+    if(emailid != "" & full_name != "" & password != "" & dob != "")
+    {
+    var jsonSend = {"full_name" : full_name, "emailid" : emailid, "password" : password, "dob" : dob, "account_holder_type" : "1"};
+    console.log(jsonSend);
+    
+    $.ajax({
+            type: "POST", //rest Type
+            url: "https://goviddo.online/uploadMyPitchUserDetails",
+            data: jsonSend,
+            success: function (msg) {
+                console.log(msg);
+                if(msg.status == "success")
+                {
+    		        window.localStorage.setItem("mypitch_user_login_email", emailid);
+    		        window.localStorage.setItem("mypitch_user_login_userid", msg.userid);
+    		        $('#loginModal').modal('hide');
+    		        window.location.href = "create_project.html";
+                }
+                else{
+                    document.getElementById("errormsg").innerHTML = msg.message;
+                }
+            }
+    });
+    
+    }
+    
+    
+}
+
+</script>
+
+
+
+</html>
