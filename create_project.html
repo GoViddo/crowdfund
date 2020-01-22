@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="assets/css/margin_top.css">
     <link rel="stylesheet" href="assets/css/margin_bottom.css">
     <link rel="stylesheet" href="assets/css/margin_left.css">
     <link rel="stylesheet" href="assets/css/margin_right.css">
-    <link rel="stylesheet" href="assets/css/create_project.css">
+    
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.js"></script>
@@ -26,6 +25,327 @@
         w3IncludeHTML();
     </script>
     <script src="assets/js/login_modal.js"></script>
+    
+    <style>
+        * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+
+#msform fieldset {
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    
+}
+
+
+#msform textarea {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+}
+
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+
+#msform textarea{
+  display:block;
+    font-weight: 400;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+.inputtext{
+  display:block;
+    font-weight: 400;
+    width: 100%;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+
+.inputtext:focus{
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    color: #fff;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 20%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "1"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "2"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "3"
+}
+
+#progressbar #confirm1:before {
+    font-family: FontAwesome;
+    content: "4"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "5"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+
+.radiobackground{
+    font-weight: 400;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.space{
+    margin-left:25px !important;
+}
+
+
+.input-error{
+    border: 2px solid red !important;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.progress{
+    margin-top:20px;
+}
+    </style>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/create_project.css">
 
 </head>
 
@@ -68,17 +388,13 @@
                         <form id="msform">
                             <!-- progressbar -->
                             <ul id="progressbar">
-                                <li class="active" id="account" step1></li>
-                                <div class="connector"></div>
-                                <li id="personal" step2></li>
-                                <div class="connector"></div>
-                                <li id="payment" step3></li>
-                                <div class="connector"></div>
-                                <li id="confirm1" step4></li>
-                                <div class="connector"></div>
-                                <li id="confirm" step5></li>
+                                <li class="active" id="account"></li>
+                                <li id="personal"></li>
+                                <li id="payment"></li>
+                                <li id="confirm1"></li>
+                                <li id="confirm"></li>
                             </ul> <!-- fieldsets -->
-                            <fieldset>
+                             <fieldset>
                                 <div class="form-card">
                                     
                                        <!--<div class="row space" style="width:100%; margin-bottom:15px;">
@@ -113,7 +429,7 @@
                                     
                                     <div class="row space">
                                         <div class="col-md-5">
-                                            <p class="vertical-marker">Title for your bussiness, creative or social project</p>
+                                            <p class="vertical-marker">Title for your movie, creative or social project</p>
                                         </div>
                                         <div class="col-md-7">
                                             <textarea name="project_title" id="project_title" class="form-control field" rows="3" maxlength="80"></textarea>
@@ -141,7 +457,7 @@
                                                 <div class="radiobackground field" style="white-space:nowrap;text-align: center; margin-bottom:5px;">
                                                     <label for="bussiness_radio">
                                                     <input type="radio" name="crated_by" value="bussiness" id="bussiness_radio">
-                                                    <span>&nbsp;Bussiness</span>
+                                                    <span>&nbsp;Business</span>
                                                     </label>
                                                 </div>
                                             </div>
@@ -150,7 +466,7 @@
                                     
                                     <div class="row space" style="margin-top:20px;">
                                         <div class="col-md-5">
-                                            <p class="vertical-marker">Short pitch for your bussiness, creative or social project</p>
+                                            <p class="vertical-marker">Short pitch for your movie, creative or social project</p>
                                         </div>
                                         <div class="col-md-7">
                                             <textarea name="project_short_description" id="project_short_description" class="form-control field" rows="8" maxlength="300"></textarea>
@@ -173,7 +489,7 @@
                                     
                                     <div class="row space" style="width:100%; margin-bottom:15px; border: 1px solid #FFFFFF; padding: 25px 5px;">
                                         <div class="col-md-5">
-                                            <p class="vertical-marker">Company Logo</p>
+                                            <p class="vertical-marker">Logo</p>
                                         </div>
                                         <div class="col-md-7">
                                             <input type="file" name="companylogo" id="companylogo" class="form-control inputtext"  accept="image/*" onchange="imageToUploadLogo('logo', 'companylogo', 0)">
@@ -254,12 +570,11 @@
                             <fieldset>
                                 <div class="form-card">
                                     
-                                    <div style="text-align:center;">
-                                        <button id="add_extra_team_member" type="button" onclick="add_more_member_section()" class="btn btn-default" style="margin-bottom:15px;">Add More Member</button>
-                                    </div>
+                                    
                                     
                                         <div class="team_details" id="team_details">
                                             <div class="team_mem" id="team-1" style="margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">
+                                                <p class="float-right" id="cross_if_last_1"></p>
                                                 <p style="text-align:center;" id="member_number-1">Member 1</p>
                                                 <div class="row" style="margin-top:15px;">
                                                     <div class="col-md-5">
@@ -273,7 +588,7 @@
                                                 
                                                 <div class="row" style="margin-top:15px;">
                                                     <div class="col-md-5">
-                                                        <p class="vertical-marker">Team Image</p>
+                                                        <p class="vertical-marker">Team Member Image</p>
                                                     </div>
                                                     <div class="col-md-7">
                                                         <input type="file" name="team_member_image-1" id="team_member_image-1" class="form-control inputtext" accept="image/*" onchange="imageToUpload('team', 'team_member_image', 1)">
@@ -298,6 +613,10 @@
                                             
                                             
                                         </div>
+                                        
+                                        <div style="text-align:center;">
+                                        <button id="add_extra_team_member" type="button" onclick="add_more_member_section()" class="btn btn-default" style="margin-bottom:15px;">Add More Member</button>
+                                    </div>
                                 </div>
                                 <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
                                 <input type="button" name="make_payment" id="page3" class="next btn btn-action" value="Next" />
@@ -306,7 +625,7 @@
                                 <div class="form-card">
                                     <div class="row space">
                                         <div class="col-md-5">
-                                            <p class="vertical-marker">Complete idea for your bussiness, creative or social project</p>
+                                            <p class="vertical-marker">Complete idea for your movie, creative or social project</p>
                                         </div>
                                         <div class="col-md-7">
                                             <textarea name="project_idea" id="project_idea" class="form-control" rows="15"></textarea>
@@ -584,11 +903,18 @@ return false;
 });
 
 var lastmemebernumber = 1;
+
+var newHTMLDeleteIcon = '<i onclick="delete_my_this_div(1)" class="fa fa-window-close" aria-hidden="true"></i>';
+
+    $("#cross_if_last_"+lastmemebernumber).append( newHTMLDeleteIcon ); 
+   
+
 function add_more_member_section()
 {
    lastmemebernumber = lastmemebernumber + 1;
    
    var dataOfNewAddition = '<div class="team_mem" id="team-'+lastmemebernumber+'" style="margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">'
+   +'<p class="float-right" id="cross_if_last_'+lastmemebernumber+'"></p>'
    +'<p style="text-align:center;" id="member_number-'+lastmemebernumber+'">Member '+lastmemebernumber+'</p>'
    +'<div class="row" style="margin-top:15px;">'
    +'<div class="col-md-5">Team Member Name</div>'
@@ -596,19 +922,27 @@ function add_more_member_section()
    +'<input type="text" name="team_member_name-'+lastmemebernumber+'" id="team_member_name-'+lastmemebernumber+'" class="form-control inputtext" >'
    +'</div></div>'
    +'<div class="row" style="margin-top:15px;">'
-   +'<div class="col-md-5">Team Image</div>'
+   +'<div class="col-md-5">Team Member Image</div>'
    +'<div class="col-md-7">'
    +'<input type="file" name="team_member_image-'+lastmemebernumber+'" id="team_member_image-'+lastmemebernumber+'" class="form-control inputtext" accept="image/*" onchange="imageToUpload(\'team\', \'team_member_image\', '+lastmemebernumber+')">'
    +'</div></div>'
    +'<div class="row" style="margin-top:15px;">'
    +'<div class="col-md-5" >Team Member Position</div>'
    +'<div class="col-md-7">'
-   +'<input type="text" name="team_member_position-1" id="team_member_position-1" class="form-control inputtext">'
+   +'<input type="text" name="team_member_position-'+lastmemebernumber+'" id="team_member_position-'+lastmemebernumber+'" class="form-control inputtext">'
    +'</div></div></div>';
    
    document.querySelector('#team_details').insertAdjacentHTML(
     'beforeend',
     dataOfNewAddition);
+    
+    
+     var newHTMLDeleteIcon = '<i onclick="delete_my_this_div('+lastmemebernumber+')" class="fa fa-window-close" aria-hidden="true"></i>';
+    
+    var removeDeleteFrom = lastmemebernumber - 1;
+    
+    $("#cross_if_last_"+lastmemebernumber).append( newHTMLDeleteIcon ); 
+    $("#cross_if_last_"+removeDeleteFrom).remove(); 
    
 }
 
@@ -947,6 +1281,14 @@ function create_account()
     
     
 }
+
+
+function delete_my_this_div(deleteid)
+{
+    $('#team-'+deleteid).remove();
+    lastmemebernumber = lastmemebernumber - 1;
+}
+
 
   </script>
 

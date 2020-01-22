@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>GoViddo Crowdfund</title>
+    <title>GoViddo Crowdfunding</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
@@ -22,7 +22,7 @@
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
 
-  <script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <script src="https://www.w3schools.com/lib/w3data.js"></script>
   <script>
     w3IncludeHTML();
   </script>
@@ -89,14 +89,14 @@
                             food to city centre offices by cargo bike. With 40,000+ meals
                             sold since launch in 2017, it is ready to scale with your
                             investment.</p>
-                        <a class="btn btn-invest" href="invest_details.html" id="currentpageurlforraise">Raise</a>
+                        <a class="btn btn-invest" href="invest_details.html" id="currentpageurlforraise">Invest</a>
                     </div>
                 </div>
             </div>
             <div class="row">
 
                 <div class="col-md-4">
-                    <img src="img/logo_header_invest.png" class="img-fluid imgheader">
+                    <img src="img/logo_header_invest.png" id="headerlogoslider" style="border-radius: 50%;" class="img-fluid imgheader">
                 </div>
 
                 <hr class="clearfix w-100 d-md-none">
@@ -118,10 +118,10 @@
                     <p id="investors">38</p>
                 </div>
 
-                <div class="col-md-2 col-6">
+                <!--<div class="col-md-2 col-6">
                     <p>Investors</p>
                     <p id="visitors">38</p>
-                </div>
+                </div>-->
 
             </div>
 
@@ -277,7 +277,7 @@ for(k = 0; k < arrayforLoop.length; k++)
     for (j = 0; j < obj.length; j++) {
         
         
-        var percentShow =  ((obj[j].crowdfund_total_raised * 100 )/ (obj[j].crowdfund_total_target));    
+        var percentShow =  ((obj[j].crowdfund_total_raised * 100 )/ (obj[j].crowdfund_total_target)).toFixed(2);    
         
         var backgroundcolor = '#FF5757';
         
@@ -294,12 +294,13 @@ for(k = 0; k < arrayforLoop.length; k++)
         }
         
         if (j == 0) {
+            console.log(obj[j]);
             
             var Data1 = Data1 + '<div id="catlist_recommndation1" class="scrolling-wrapper">'
                 + '<div class="card">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
-                + '<img src="img/slide1.png" class="card-img-top" alt="...">'
-                + '<img src="img/logo_header_invest.png" class= "img_overlay">'
+                + '<img src="'+obj[j].crowdfund_project_banner_image+'" class="card-img-top" alt="...">'
+                + '<img src="'+obj[j].crowdfund_project_logo+'" class= "img_overlay" style="border-radius: 50%;">'
                 + '</a>'
                 + '<div class="card-body margintop_50">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
@@ -338,8 +339,8 @@ for(k = 0; k < arrayforLoop.length; k++)
             
             var Data1 = Data1 + ' <div class="card">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
-                + '<img src="img/slide1.png" class="card-img-top" alt="...">'
-                + '<img src="img/logo_header_invest.png" class= "img_overlay">'
+                + '<img src="'+obj[j].crowdfund_project_banner_image+'" class="card-img-top" alt="...">'
+                + '<img src="'+obj[j].crowdfund_project_logo+'" class= "img_overlay" style="border-radius: 50%;">'
                 + '</a>'
                 + '<div class="card-body margintop_50">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
@@ -499,7 +500,9 @@ for(k = 0; k < arrayforLoop.length; k++)
                 
                 document.getElementById('investors').innerHTML = numberWithCommas(arrayDataForSingleListing[0].crowdfund_number_of_investors);
                 
-                document.getElementById('visitors').innerHTML = (arrayDataForSingleListing[0].crowdfund_number_of_investors);
+                document.getElementById('headerlogoslider').src = arrayDataForSingleListing[0].crowdfund_project_logo;
+                
+                
                 
                 document.getElementById('currentpageurlforraise').href="invest_details.html?proid="+arrayDataForSingleListing[0].crowdfund_project_id; 
              

@@ -119,6 +119,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
          
     }
 	
+	$data['resp'] = $response;
+	
 	// Transaction status
     echo json_encode($data);
 }

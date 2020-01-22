@@ -77,9 +77,28 @@ function loginAjax(){
                                 window.localStorage.setItem("mypitch_user_login_email", data.crowdfund_user_email);
     		                    window.localStorage.setItem("mypitch_user_login_userid", data.crowdfun_user_id);
     		                    
+    		                    var currentLocation = window.location;
+    		                    var pathname = new URL(currentLocation).pathname;
+    		                    var arrPath = pathname.split('/');
+    		                    
+    		                    if(arrPath[2].indexOf("raise.html") !== -1)
+    		                    {
+    		                        window.location.href = "create_project.html";
+    		                    }
+    		                    else if((arrPath[2].indexOf("invest_details.html") !== -1) || (arrPath[2].indexOf("invest_details_team.html") !== -1) || (arrPath[2].indexOf("invest_details_documents.html") !== -1))
+    		                    {
+    		                        var arrPathProId = currentLocation.href.split('proid=');
+    		                        console.log(arrPathProId[1])
+    		                        window.location.href = "payment.html?proid="+arrPathProId[1];
+    		                    }
+    		                    else{
+    		                        window.location.reload();
+    		                    }
+    		                    
     		                    $('#loginModal').modal('hide');
     		                    
-    		                    window.location.href = "create_project.html";
+    		                    
+    		                    
                             }
                         }
     });

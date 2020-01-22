@@ -11,9 +11,9 @@ $currency   = "GBP";
 
  
 // PayPal API configuration
-define('PAYPAL_API_USERNAME', 'sb-blzsv745455_api1.business.example.com');
-define('PAYPAL_API_PASSWORD', 'QC7KCBYDNDTJQR53');
-define('PAYPAL_API_SIGNATURE', 'AhZDWzJzu7WgIdxbPCnOKmB8uPwRA5fekNKluwAO.DoH49aoF0KgP3Yk');
+define('PAYPAL_API_USERNAME', 'sb-jx4uc770378_api1.business.example.com');
+define('PAYPAL_API_PASSWORD', 'Q5YRYT2UF7T3E5NT');
+define('PAYPAL_API_SIGNATURE', 'AvG3cMEHRHLCb2u52bTMs75srqdcAGs2TkTqOd0CfTMTQLdcd-SJwdJ6');
 define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE
 
 // Database configuration

@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GoViddo Crowdfund</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/margin_top.css">
+    <link rel="stylesheet" href="assets/css/margin_bottom.css">
+    <link rel="stylesheet" href="assets/css/margin_left.css">
+    <link rel="stylesheet" href="assets/css/margin_right.css">
+    
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
+    <script src="assets/js/login_modal.js"></script>
+    
+    <style>
+        * {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+
+#msform fieldset {
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+    
+}
+
+
+#msform textarea {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 16px;
+}
+
+#msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid skyblue;
+    outline-width: 0
+}
+
+#msform .action-button {
+    width: 100px;
+    background: skyblue;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px skyblue
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161
+}
+
+
+#msform textarea{
+  display:block;
+    font-weight: 400;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+.inputtext{
+  display:block;
+    font-weight: 400;
+    width: 100%;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+
+.inputtext:focus{
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    color: #fff;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2C3E50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #000000
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 20%;
+    float: left;
+    position: relative
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "1"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "2"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "3"
+}
+
+#progressbar #confirm1:before {
+    font-family: FontAwesome;
+    content: "4"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "5"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: skyblue
+}
+
+
+.radiobackground{
+    font-weight: 400;
+    color: #343434;
+    background: rgba(52,52,52,0.3);
+    border: none;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(52,52,52,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px  1px rgba(255,255,255,0.2);
+    transition: all .3s ease-in-out;
+    position: relative;
+    font-size: 15px;
+}
+
+
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.space{
+    margin-left:25px !important;
+}
+
+
+.input-error{
+    border: 2px solid red !important;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+.progress{
+    margin-top:20px;
+}
+    </style>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/create_project.css">
+
+</head>
+
+<body>
+
+    <div id="snackbar">Please feel all mandatory fields first..</div>
+
+    <header></header>
+    <script>
+        fetch("./header.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("header").innerHTML = data;
+    if(window.localStorage.getItem("mypitch_user_login_email") == null)
+    {
+        if(data.indexOf("my_pitch_header_option") !== -1)
+        {
+            //console.log("true");
+            document.getElementById("my_pitch_header_option").style.display = "none";
+            document.getElementById("profile_header_display").style.display = "none";
+            document.getElementById("signout_header_display").style.display = "none";
+            document.getElementById("notification_header_display").style.display = "none";
+            document.getElementById("login_header_display").style.display = "block";
+        }
+    }
+  });
+
+    </script>
+
+    
+    <!-- MultiStep Form -->
+<div class="container-fluid">
+    <div class="row justify-content-center mt-0">
+        <div class="">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12 mx-0">
+                        <form id="msform">
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account"></li>
+                                <li id="personal"></li>
+                                <li id="payment"></li>
+                                <li id="confirm1"></li>
+                                <li id="confirm"></li>
+                            </ul> <!-- fieldsets -->
+                             <fieldset>
+                                <div class="form-card">
+                                    
+                                       <!--<div class="row space" style="width:100%; margin-bottom:15px;">
+                                        <div class="col-md-4">
+                                            Full Name
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="text" name="full_name" id="full_name" class="form-control inputtext">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="row space" style="width:100%; margin-bottom:15px;">
+                                        <div class="col-md-4">
+                                            Emailid
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="email" name="emailid" id="emailid" class="form-control inputtext">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row space" style="width:100%; margin-bottom:15px;">
+                                        <div class="col-md-4">
+                                            Password
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="password" name="password" id="password" class="form-control inputtext">
+                                        </div>
+                                    </div>-->
+                                    
+                                    
+                                    
+                                    <div class="row space">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Title for your business, creative or social project</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <textarea name="project_title" id="project_title" class="form-control field" rows="3" maxlength="80"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                     <div class="row space">
+                                        <div class="col-md-5">
+                                                <p class="vertical-marker">This project is created and managed by</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="radio-container">
+                                                <div class="radiobackground field" style="white-space:nowrap;text-align: center; margin-bottom:5px;">
+                                                    <label for="individual_radio">
+                                                    <input type="radio" name="crated_by" value="individual" id="individual_radio">
+                                                    <span>&nbsp;An Individual</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radiobackground field" style="white-space:nowrap;text-align: center; margin-bottom:5px;">
+                                                    <label for="organization_radio">
+                                                    <input type="radio" name="crated_by" value="organization" id="organization_radio" checked>
+                                                    <span>&nbsp;An Organization</span>
+                                                    </label>
+                                                </div>
+                                                <div class="radiobackground field" style="white-space:nowrap;text-align: center; margin-bottom:5px;">
+                                                    <label for="bussiness_radio">
+                                                    <input type="radio" name="crated_by" value="bussiness" id="bussiness_radio">
+                                                    <span>&nbsp;Business</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row space" style="margin-top:20px;">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Short pitch for your business, creative or social project</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <textarea name="project_short_description" id="project_short_description" class="form-control field" rows="8" maxlength="300"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="row space" style="margin-top:20px; margin-bottom:20px;">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Project category</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <select id="select_category" name="select_category" class="form-control" style="width:100%; margin-bottom:20px;">
+                                              <option value="">Select Category</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+    
+                                    
+                                    <div class="row space" style="width:100%; margin-bottom:15px; border: 1px solid #FFFFFF; padding: 25px 5px;">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Company Logo</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="file" name="companylogo" id="companylogo" class="form-control inputtext"  accept="image/*" onchange="imageToUploadLogo('logo', 'companylogo', 0)">
+                                        </div>
+                                        <div class="col-md-12">
+                                        <div class="progress" id="pbarforlogo">
+                                                   <div class="progress-bar" id="progress-bar_logo" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <input type="hidden" name="old_company_logo" id="old_company_logo">
+                                                                     
+                                    
+                                    
+                                </div> <input type="button" name="next" id="page1" class="next btn btn-action" value="Next"/>
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    
+                                    <div class="row space" style="margin-top:20px; margin-bottom:20px;">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Total target amount you want to raise?</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="number" name="crowdfund_total_target" id="crowdfund_total_target" class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div style="text-align:center;">
+                                        <h6>Old Documents</h6>
+                                        <p id="old_documents_list">
+                                        </p>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                        <div class="pitch_documents" id="pitch_documents">
+                                            <div class="team_mem" id="document-1" style="margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">
+                                                <p style="text-align:center;" id="document_pitch-1">Document 1</p>
+                                                <div class="row" style="margin-top:15px;">
+                                                    <div class="col-md-5">
+                                                        <p class="vertical-marker">Document PDF</p>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <input type="file" name="document_pdf-1" id="document_pdf-1" class="form-control inputtext" accept="application/pdf" onchange="uploadDocuments('document_pdf', 1)">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="progress">
+                                                   <div class="progress-bar" id="progress-bar1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                          
+                                         </div>
+                                         
+                                           <div style="text-align:center;">
+                                        <button id="add_extra_documents" type="button" onclick="add_extra_documents_section()" class="btn btn-default" style="margin-bottom:15px;">Add More Docments</button>
+                                    </div>
+                                 
+                                    
+                                    
+                                    
+                                    <div class="row space" style="width:100%; margin-bottom:15px; margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Banner Image</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input type="file" name="bannerimage" id="bannerimage" class="form-control inputtext"  accept="image/*" onchange="imageToUploadBanner('banner', 'bannerimage', 0)">
+                                        </div>
+                                        <div class="col-md-12">
+                                        <div class="progress">
+                                            <div class="progress-bar" id="progress-bar_banner" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                                
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <input type="hidden" name="old_banner_image" id="old_banner_image">
+                                    
+                                    
+                                    
+
+                                    
+                                </div> 
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                <input type="button" name="next" id="page2" class="next btn btn-action" value="Next" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    
+                                    <h6>Old Team Member Details</h6>
+                                    <div id="old_team_members_list"></div>
+                                    
+                                    
+                                        <div class="team_details" id="team_details">
+                                            <div class="team_mem" id="team-1" style="margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">
+                                                <p class="float-right" id="cross_if_last_1"></p>
+                                                <p style="text-align:center;" id="member_number-1">Member 1</p>
+                                                <div class="row" style="margin-top:15px;">
+                                                    <div class="col-md-5">
+                                                        <p class="vertical-marker">Team Member Name</p>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="team_member_name-1" id="team_member_name-1" class="form-control inputtext">
+                                                    </div>
+                                                </div>
+                                                
+                                                
+                                                <div class="row" style="margin-top:15px;">
+                                                    <div class="col-md-5">
+                                                        <p class="vertical-marker">Team Member Image</p>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <input type="file" name="team_member_image-1" id="team_member_image-1" class="form-control inputtext" accept="image/*" onchange="imageToUpload('team', 'team_member_image', 1)">
+                                                    </div>
+                                                    
+                                                    <div class="progress">
+                                                   <div class="progress-bar" id="progress-bar1" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                </div>
+                                                
+                                                <div class="row" style="margin-top:15px;">
+                                                    <div class="col-md-5" >
+                                                        <p class="vertical-marker">Team Member Position</p>
+                                                    </div>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="team_member_position-1" id="team_member_position-1" class="form-control inputtext">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            
+                                            
+                                        </div>
+                                        
+                                        <div style="text-align:center;">
+                                        <button id="add_extra_team_member" type="button" onclick="add_more_member_section()" class="btn btn-default" style="margin-bottom:15px;">Add More Member</button>
+                                    </div>
+                                </div>
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                <input type="button" name="make_payment" id="page3" class="next btn btn-action" value="Next" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <div class="row space">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Complete idea for your business, creative or social project</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <textarea name="project_idea" id="project_idea" class="form-control" rows="15"></textarea>
+                                        </div>
+                                    </div>
+                                
+                                    
+                                    <div class="row space">
+                                        <div class="col-md-5">
+                                            <p class="vertical-marker">Video link from vimeo (Upload Video On Vimeo)</p>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <textarea name="videolink" id="videolink" class="form-control" rows="3" maxlength="300" placeholder="https://vimeo.com/316629196"></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <input type="hidden" name="update_location_db_id" id="update_location_db_id">
+                                    
+                                </div> 
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" /> 
+                                <input type="button" name="submit" id="pagesubmit" class="next btn btn-action" value="Submit Details" />
+                            </fieldset>
+                            <fieldset>
+                                <div class="form-card">
+                                    <h2 class="fs-title text-center">Success !</h2> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-3"> <img src="https://img.icons8.com/color/96/000000/ok--v2.png" class="fit-image"> </div>
+                                    </div> <br><br>
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5>You Have Uploaded New Project...</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    </body>
+    
+    <script>
+    
+    var navbarCategories = "https://goviddo.online/crowdConfig";
+    var oldPDFListArray = [];
+    
+    var oldPosition = 0;
+    var newPositionArray = [];
+    
+    var old_team_members_list_array = [];
+    
+    
+        function parseURLParams(url) {
+        var queryStart = url.indexOf("?") + 1,
+            queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+            query = url.slice(queryStart, queryEnd - 1),
+            pairs = query.replace(/\+/g, " ").split("&"),
+            parms = {}, i, n, v, nv;
+    
+        if (query === url || query === "") return;
+    
+        for (i = 0; i < pairs.length; i++) {
+            nv = pairs[i].split("=", 2);
+            n = decodeURIComponent(nv[0]);
+            v = decodeURIComponent(nv[1]);
+    
+            if (!parms.hasOwnProperty(n)) parms[n] = [];
+            parms[n].push(nv.length === 2 ? v : null);
+        }
+        return parms;
+    }
+    
+    var urlParams = parseURLParams(window.location.href);
+    var proid = "";
+    if (window.location.href.indexOf("proid") > -1) {
+        proid = urlParams.proid[0];
+        idfortransfer = proid;
+    }
+    else{
+        proid = 0;
+    }
+    
+
+    
+    $.ajax({
+            type: "GET", //rest Type
+            url: navbarCategories,
+            success: function (msg) {
+                
+                var arrayData = msg.data;
+                var catagoriesDisplay = "";
+                var allcatData = "";
+                var arrayforLoop = [];
+                for(i = 0; i < arrayData.length; i++)
+                {
+                    $("#select_category").append(new Option(arrayData[i].catname, arrayData[i].catid));
+                }
+            }
+    });
+    
+    
+    var projectlogo_url = "";
+    var project_banner_img_url = "";
+    var teamdetails_images_url = [];
+    var documents_pdf_urls = [];
+    
+    var secondPageCheckCount = 1;
+    var currentSecondPageCheckCount = 0;
+    
+        $(document).ready(function(){
+
+var current_fs, next_fs, previous_fs; //fieldsets
+var opacity;
+
+
+
+$(".next").click(function(){
+
+var pageid = this.id;
+
+current_fs = $(this).parent();
+next_fs = $(this).parent().next();
+
+                 
+
+ var parent_fieldset = $(this).parents('fieldset');
+         var next_step = true;
+        
+        parent_fieldset.find('input[type="text"],input[type="number"],input[type="email"],input[type="password"]').each(function () {
+            if ($(this).val() == "") {
+                $(this).addClass('input-error');
+                next_step = false;
+            } else {
+                $(this).removeClass('input-error');
+            }
+        });
+        
+        parent_fieldset.find('textarea').each(function () {
+            if ($(this).val() == "") {
+                $(this).addClass('input-error');
+                next_step = false;
+            } else {
+                $(this).removeClass('input-error');
+            }
+        });
+
+        if (next_step) {
+            
+            if(pageid == "pagesubmit")
+            {
+                
+                var projecttitle = document.getElementById("project_title").value;
+                
+                var selectedradio = "";
+                if (document.getElementById('individual_radio').checked) {
+                  selectedradio = document.getElementById('individual_radio').value;
+                }
+                else if (document.getElementById('organization_radio').checked) {
+                  selectedradio = document.getElementById('organization_radio').value;
+                }
+                else if (document.getElementById('bussiness_radio').checked) {
+                  selectedradio = document.getElementById('bussiness_radio').value;
+                }
+                
+                var select_category = $("#select_category option").filter(":selected").val();
+                var crowdfund_total_target = document.getElementById("crowdfund_total_target").value;
+                
+                
+                
+                var project_short_description = document.getElementById("project_short_description").value;
+                
+                //var projectlogo_url = projectlogo_url;
+                console.log(projectlogo_url);
+                //var project_banner_img_url = project_banner_img_url;
+                
+                var project_idea = document.getElementById("project_idea").value;
+                 var videolink = document.getElementById("videolink").value;
+                
+                var arrayForTeam = [];
+                
+              
+                 
+                 for(n = 0; n < teamdetails_images_url.length; n++)
+                 {
+                     
+                     var pos = n + 1;
+                     
+                 var team_member_name = document.getElementById("team_member_name-"+pos).value;
+                 var team_member_position = document.getElementById("team_member_position-"+pos).value;
+                 var imgurl = "https://goviddo.com/crowdfund/"+teamdetails_images_url[n];
+                 
+                 var jsonCreate = {"url" : imgurl, "name" : team_member_name, "position" : team_member_position};
+                 
+                 arrayForTeam.push(jsonCreate);
+                 
+                 }
+                 
+
+                 
+                 //console.log(arrayForTeam);
+                 //console.log(documents_pdf_urls);
+                 
+                 var userid = window.localStorage.getItem("mypitch_user_login_userid");
+                 
+                 for(my = 0; my < documents_pdf_urls.length; my++)
+                 {
+                     oldPDFListArray.push(documents_pdf_urls[my]);
+                 }
+                 
+                 for(myteam = 0; myteam < arrayForTeam.length; myteam++)
+                 {
+                     old_team_members_list_array.push(arrayForTeam[myteam]);
+                 }
+                 
+                 if(project_banner_img_url == "")
+                 {
+                     project_banner_img_url = $('#old_banner_image').val();
+                 }
+                 else{
+                     project_banner_img_url = "https://goviddo.com/crowdfund/"+project_banner_img_url;
+                 }
+                 
+                 if(projectlogo_url == "")
+                 {
+                     projectlogo_url = $('#old_company_logo').val();
+                 }
+                 else{
+                     projectlogo_url = "https://goviddo.com/crowdfund/"+projectlogo_url;
+                 }
+                 
+                   var jsonForProjectSubmt = {"projecttitle":projecttitle, "selectedradio":selectedradio, "project_short_description":project_short_description, "projectlogo_url" : projectlogo_url, "project_banner_img_url" : project_banner_img_url, "project_idea" : project_idea, "videolink" : videolink, "arrayForTeam" : JSON.stringify(old_team_members_list_array), "documents_pdf_urls" : JSON.stringify(oldPDFListArray), "useridformypitch" : userid, "select_category" : select_category , "crowdfund_total_target" : crowdfund_total_target, "updatepitchid" : proid};
+                   
+                   console.log(jsonForProjectSubmt);
+                   
+                    
+                       $.ajax({
+                        url:"https://goviddo.online/updatePitchDetails",
+                        method:"POST",
+                        data: jsonForProjectSubmt,
+                        success:function(data)
+                        {
+                            console.log(data);
+                         
+                            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+                            
+                            next_fs.show();
+                            current_fs.animate({opacity: 0}, {
+                            step: function(now) {
+                            opacity = 1 - now;
+                            
+                            current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                            });
+                            next_fs.css({'opacity': opacity});
+                            },
+                            duration: 600
+                            });
+                            
+                        }
+                        });
+                   
+                   
+
+                
+        
+
+            }
+            else{
+            
+            //Add Class Active
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+            
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({opacity: 0}, {
+            step: function(now) {
+            // for making fielset appear animation
+            opacity = 1 - now;
+            
+            current_fs.css({
+            'display': 'none',
+            'position': 'relative'
+            });
+            next_fs.css({'opacity': opacity});
+            },
+            duration: 600
+            });
+            
+            }
+        }
+        else{
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+
+});
+
+$(".previous").click(function(){
+
+current_fs = $(this).parent();
+previous_fs = $(this).parent().prev();
+
+//Remove class active
+$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+//show the previous fieldset
+previous_fs.show();
+
+//hide the current fieldset with style
+current_fs.animate({opacity: 0}, {
+step: function(now) {
+// for making fielset appear animation
+opacity = 1 - now;
+
+current_fs.css({
+'display': 'none',
+'position': 'relative'
+});
+previous_fs.css({'opacity': opacity});
+},
+duration: 600
+});
+});
+
+$('.radio').click(function(){
+$(this).parent().find('.radio').removeClass('selected');
+$(this).addClass('selected');
+});
+
+$(".submit").click(function(){
+return false;
+})
+
+});
+
+
+var lastmemebernumber = 1;
+
+var newHTMLDeleteIcon = '<i onclick="delete_my_this_div(1)" class="fa fa-window-close" aria-hidden="true"></i>';
+
+    $("#cross_if_last_"+lastmemebernumber).append( newHTMLDeleteIcon ); 
+   
+
+function add_more_member_section()
+{
+   lastmemebernumber = lastmemebernumber + 1;
+   
+   var dataOfNewAddition = '<div class="team_mem" id="team-'+lastmemebernumber+'" style="margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">'
+   +'<p class="float-right" id="cross_if_last_'+lastmemebernumber+'"></p>'
+   +'<p style="text-align:center;" id="member_number-'+lastmemebernumber+'">Member '+lastmemebernumber+'</p>'
+   +'<div class="row" style="margin-top:15px;">'
+   +'<div class="col-md-5">Team Member Name</div>'
+   +'<div class="col-md-7">'
+   +'<input type="text" name="team_member_name-'+lastmemebernumber+'" id="team_member_name-'+lastmemebernumber+'" class="form-control inputtext" >'
+   +'</div></div>'
+   +'<div class="row" style="margin-top:15px;">'
+   +'<div class="col-md-5">Team Member Image</div>'
+   +'<div class="col-md-7">'
+   +'<input type="file" name="team_member_image-'+lastmemebernumber+'" id="team_member_image-'+lastmemebernumber+'" class="form-control inputtext" accept="image/*" onchange="imageToUpload(\'team\', \'team_member_image\', '+lastmemebernumber+')">'
+   +'</div></div>'
+   +'<div class="row" style="margin-top:15px;">'
+   +'<div class="col-md-5" >Team Member Position</div>'
+   +'<div class="col-md-7">'
+   +'<input type="text" name="team_member_position-'+lastmemebernumber+'" id="team_member_position-'+lastmemebernumber+'" class="form-control inputtext">'
+   +'</div></div></div>';
+   
+   document.querySelector('#team_details').insertAdjacentHTML(
+    'beforeend',
+    dataOfNewAddition);
+    
+    var newHTMLDeleteIcon = '<i onclick="delete_my_this_div('+lastmemebernumber+')" class="fa fa-window-close" aria-hidden="true"></i>';
+    
+    var removeDeleteFrom = lastmemebernumber - 1;
+    
+    $("#cross_if_last_"+lastmemebernumber).append( newHTMLDeleteIcon ); 
+    $("#cross_if_last_"+removeDeleteFrom).remove(); 
+   
+}
+
+var extraDocumentsCount = 1;
+function add_extra_documents_section()
+{
+    extraDocumentsCount = extraDocumentsCount + 1;
+    
+    var documentNew = '<div class="team_mem" id="document-'+extraDocumentsCount+'" style="margin-bottom:40px; border: 1px solid #FFFFFF; padding: 25px 5px;">'
+    +'<p style="text-align:center;" id="document_pitch-'+extraDocumentsCount+'">Document '+extraDocumentsCount+'</p>'
+    +'<div class="row" style="margin-top:15px;">'
+    +'<div class="col-md-5">Document PDF</div>'
+    +'<div class="col-md-7">'
+    +'<input type="file" name="document_pdf-'+extraDocumentsCount+'" id="document_pdf-'+extraDocumentsCount+'" class="form-control inputtext" accept="application/pdf" onchange="uploadDocuments(\'document_pdf\', '+extraDocumentsCount+')" >'
+    +'</div></div>'
+    +'<div class="progress">'
+    +'<div class="progress-bar" id="progress-bar'+extraDocumentsCount+'" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>'
+    +'</div></div>';
+    
+    document.querySelector('#pitch_documents').insertAdjacentHTML(
+    'beforeend',
+    documentNew);
+    
+    
+}
+
+var checkNumber = [];
+
+ function imageToUpload(from, id, number)
+ {
+     
+     
+     var actualidforimg = "";
+     if(from == "team")
+     {
+        actualidforimg = id+"-"+number;
+     }
+     else{
+        actualidforimg = id;
+     }
+    
+    var name = document.getElementById(actualidforimg).files[0].name;
+    var form_data = new FormData(); 
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById(actualidforimg).files[0]);
+    
+    form_data.append("file", document.getElementById(actualidforimg).files[0]);
+    form_data.append("from", from);
+    
+   $.ajax({
+    url:"upload_images.php",
+    method:"POST",
+    data: form_data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    success:function(data)
+    {
+     
+     if(from == "logo")
+     {
+         projectlogo_url = data;
+     }
+     else if(from == "banner")
+     {
+         project_banner_img_url = data;
+     }
+     else if(from == "team")
+     {
+         
+         if(checkNumber.includes(number))
+         {  
+            	var no = checkNumber.indexOf(number);
+            	teamdetails_images_url[no] = data;
+         }
+         else{
+            teamdetails_images_url.push(data);
+            checkNumber.push(number);
+         }
+         
+         
+     }
+     
+    }
+   });
+    
+ }
+ 
+ 
+ 
+ 
+ 
+ function imageToUploadLogo(from, id, number)
+ {
+     
+     
+     var actualidforimg = "";
+     if(from == "team")
+     {
+        actualidforimg = id+"-"+number;
+     }
+     else{
+        actualidforimg = id;
+     }
+    
+    var name = document.getElementById(actualidforimg).files[0].name;
+    var form_data = new FormData(); 
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById(actualidforimg).files[0]);
+    
+    form_data.append("file", document.getElementById(actualidforimg).files[0]);
+    form_data.append("from", from);
+    
+   $.ajax({
+    url:"upload_images.php",
+    method:"POST",
+    data: form_data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    xhr: function() {
+        var xhr = $.ajaxSettings.xhr();
+        xhr.upload.onprogress = function(e) {
+            var percentProgress = Math.floor(e.loaded / e.total *100) + '%';
+            console.log(percentProgress);
+            if(percentProgress == "100%")
+            {
+                 document.getElementById("page1").style.display = "inline";
+            }
+            
+            $('#progress-bar_logo').animate({
+              width: percentProgress
+             }, {
+              duration: 1000
+             });
+        };
+        return xhr;
+    },
+    success:function(data)
+    {
+     
+     
+         projectlogo_url = data;
+         console.log(data);
+         console.log(projectlogo_url);
+     
+    }
+   });
+    
+ }
+ 
+ 
+ 
+ function imageToUploadBanner(from, id, number)
+ {
+     
+     
+     var actualidforimg = "";
+     if(from == "team")
+     {
+        actualidforimg = id+"-"+number;
+     }
+     else{
+        actualidforimg = id;
+     }
+    
+    var name = document.getElementById(actualidforimg).files[0].name;
+    var form_data = new FormData(); 
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById(actualidforimg).files[0]);
+    
+    form_data.append("file", document.getElementById(actualidforimg).files[0]);
+    form_data.append("from", from);
+    
+   $.ajax({
+    url:"upload_images.php",
+    method:"POST",
+    data: form_data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    xhr: function() {
+        var xhr = $.ajaxSettings.xhr();
+        xhr.upload.onprogress = function(e) {
+            var percentProgress = Math.floor(e.loaded / e.total *100) + '%';
+            console.log(percentProgress);
+            if(percentProgress == "100%")
+            {
+                currentSecondPageCheckCount = currentSecondPageCheckCount + 1;
+            }
+            
+            if(percentProgress == "100%" & secondPageCheckCount == currentSecondPageCheckCount)
+            {
+                document.getElementById("page2").style.display= "inline";
+            }
+            
+            $('#progress-bar_banner').animate({
+              width: percentProgress
+             }, {
+              duration: 1000
+             });
+        };
+        return xhr;
+    },
+    success:function(data)
+    {
+     
+     
+         project_banner_img_url = data;
+     
+     
+    }
+   });
+    
+ }
+ 
+ 
+ 
+ var pdfPosition = [];
+ var pdfPositionCounts = [];
+ 
+  function uploadDocuments(id, number)
+ {
+         if(pdfPositionCounts.includes(number))
+         {
+             
+         }
+         else{
+            pdfPositionCounts.push(number);
+            secondPageCheckCount = secondPageCheckCount + 1;
+         }
+         
+        actualidforimg = id+"-"+number;
+     
+    
+    var name = document.getElementById(actualidforimg).files[0].name;
+    var form_data = new FormData(); 
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById(actualidforimg).files[0]);
+    
+    form_data.append("file", document.getElementById(actualidforimg).files[0]);
+    
+   $.ajax({
+    url:"upload_pdf.php",
+    method:"POST",
+    data: form_data,
+    contentType: false,
+    cache: false,
+    processData: false,
+    xhr: function() {
+        var xhr = $.ajaxSettings.xhr();
+        xhr.upload.onprogress = function(e) {
+            var percentProgress = Math.floor(e.loaded / e.total *100) + '%';
+            console.log(percentProgress);
+            
+            if(percentProgress == "100%")
+            {
+                currentSecondPageCheckCount = currentSecondPageCheckCount + 1;
+            }
+            
+            if(percentProgress == "100%" & secondPageCheckCount == currentSecondPageCheckCount)
+            {
+                document.getElementById("page2").style.display= "inline";
+            }
+            
+            $('#progress-bar'+number).animate({
+              width: percentProgress
+             }, {
+              duration: 1000
+             });
+        };
+        return xhr;
+    },
+    success:function(data)
+    {
+        if(pdfPosition.includes(number))
+         {  
+            	var no = pdfPosition.indexOf(number);
+            	documents_pdf_urls[no] = "https://goviddo.com/crowdfund/"+data;
+            	console.log(documents_pdf_urls);
+         }
+         else{
+            pdfPosition.push(number);
+            documents_pdf_urls.push("https://goviddo.com/crowdfund/"+data);
+            console.log(data);
+            
+         }
+     
+        if(documents_pdf_urls.length == pdfPositionCounts.length)
+        {
+            document.getElementById("pagesubmit").style.display = "inline";
+        }
+         
+     
+    }
+   });
+    
+ }
+
+    </script>
+    
+    
+      <script>
+
+
+function create_account()
+{
+    var full_name = $('#name_of_account_holder').val();
+    var emailid = $('#email_register').val();
+    var password = $('#password_register').val();
+    var dob = $('#dateof_birth').val();
+    
+    if(emailid != "" & full_name != "" & password != "" & dob != "")
+    {
+    var jsonSend = {"full_name" : full_name, "emailid" : emailid, "password" : password, "dob" : dob, "account_holder_type" : "1"};
+    console.log(jsonSend);
+    
+    $.ajax({
+            type: "POST", //rest Type
+            url: "https://goviddo.online/uploadMyPitchUserDetails",
+            data: jsonSend,
+            success: function (msg) {
+                console.log(msg);
+                if(msg.status == "success")
+                {
+    		        window.localStorage.setItem("mypitch_user_login_email", emailid);
+    		        window.localStorage.setItem("mypitch_user_login_userid", msg.userid);
+    		        $('#loginModal').modal('hide');
+    		        window.location.href = "create_project.html";
+                }
+                else{
+                    document.getElementById("errormsg").innerHTML = msg.message;
+                }
+            }
+    });
+    
+    }
+    
+    
+}
+
+
+
+
+var jsonSend = {"proid" : proid};
+var currentPageDetails = "https://goviddo.online/singleProjectPage";    
+
+    $.ajax({
+            type: "POST", //rest Type
+            url: currentPageDetails,
+            data: jsonSend,
+            success: function (msg) {
+                
+                var arrayDataForSingleListing = msg.data;
+                console.log(arrayDataForSingleListing);
+                
+                document.getElementById('project_title').value = arrayDataForSingleListing[0].crowdfund_project_title;
+                
+                var project_createdby = arrayDataForSingleListing[0].project_given_by;
+                
+                if(project_createdby == "individual")
+                {
+                    document.getElementById("individual_radio").checked = "true"
+                }
+                else if(project_createdby == "organization")
+                {
+                    document.getElementById("organization_radio").checked = "true"
+                }
+                else if(project_createdby == "bussiness")
+                {
+                    document.getElementById("bussiness_radio").checked = "true"
+                }
+                
+                
+                document.getElementById('project_short_description').value = arrayDataForSingleListing[0].crowdfund_short_description;
+                
+                var selecteTagValue = arrayDataForSingleListing[0].crowdfund_project_category_details;
+                console.log(selecteTagValue);
+                
+                $('#select_category option[value='+selecteTagValue+']').attr('selected','true');
+                
+                $('#old_company_logo').val(arrayDataForSingleListing[0].crowdfund_project_logo);
+                
+                $('#crowdfund_total_target').val(arrayDataForSingleListing[0].crowdfund_total_target);
+                
+                //old_documents_list
+                 var pdfList = arrayDataForSingleListing[0].crowdfund_documents_pdf_list;
+                
+            var pdfList1 = pdfList.replace("[", "");
+              var pdfList2 = pdfList1.replace("]", "");
+              
+              var array = pdfList2.split(",");
+              
+              var DataPitchList = "";
+              
+              
+              
+                  for(m = 0; m < array.length; m++)
+                  {
+                      
+                    if (m == 0) {
+                DataPitchList = DataPitchList + '<div class="row">'
+                    + '<div class="col-lg-4 col-6 myspace" style="margin-top:10px;" id="delete_this_pdf_'+m+'">'
+                    +'<p class="float-right" onclick="delete_old_pdf(this.id)" style="margin-right: 10px;color:#000000;" id="remove_position_'+m+'" ><i class="fa fa-window-close" aria-hidden="true"></i></p>'
+                    + '<a href='+array[m]+' target="_blank" class="btn btn-custome btn-block">pitch.pdf</a>'
+                    + '</div>';
+            }
+            else {
+                DataPitchList = DataPitchList + '<div class="col-lg-4 col-6 myspace" style="margin-top:10px;" id="delete_this_pdf_'+m+'">'
+                +'<p class="float-right" style="margin-right: 10px;color:#000000;" onclick="delete_old_pdf(this.id)" id="remove_position_'+m+'" ><i class="fa fa-window-close" aria-hidden="true"></i></p>'
+                    + '<a href="'+array[m]+'" target="_blank" class="btn btn-custome btn-block">pitch.pdf</a>'
+                    + '</div>';
+            }
+            
+            oldPDFListArray.push(array[m]);
+    
+        }
+    
+        document.getElementById("old_documents_list").innerHTML = "</div>" + DataPitchList;
+        
+        $('#old_banner_image').val(arrayDataForSingleListing[0].crowdfund_project_banner_image);
+        
+        
+        
+        
+        
+        
+                        var teamarray = arrayDataForSingleListing[0].crowdfund_team_details_array;
+               // 
+              var teamarray1 = teamarray.replace("[", "");
+              var teamarray2 = teamarray1.replace("]", "");
+              
+              var array = teamarray2.split("},");
+              
+              var DataTeam = "";
+              
+              for(m = 0; m < array.length; m++)
+              {
+                  if(array.length > 1)
+                  {
+                  if(m < (array.length -1))
+                  {
+                  var jsoncreate = array[m]+"}";
+                  var jsonTeam = JSON.parse(jsoncreate);
+                  
+                  old_team_members_list_array.push(jsonTeam);
+                  
+                  if (m == 0) {
+                        DataTeam = DataTeam + '<div class="row">'
+                            + '<div class="col-lg-4 col-sm-6 mb-5" id="actual_delete_pos_'+m+'" style="border: 1px solid;">'
+                            +'<p class="float-right" onclick="delete_team_pos('+m+')"><i class="fa fa-window-close" aria-hidden="true"></i></p>'
+                            + '<div class="rounded shadow-sm py-5 px-4">'
+                            + '<img src="'+jsonTeam.url+'" alt="" width="175" class="img-fluid rounded-circle mb-3 img-thumbnail">'
+                            + '<h5 class="mb-0">'+jsonTeam.name+'</h5><span class="small text-uppercase text-muted">'+jsonTeam.position+'</span>'
+                            + '</div>'
+                            + '</div>';
+                    }
+                    else {
+                        DataTeam = DataTeam + '<div class="col-lg-4 col-sm-6 mb-5" id="actual_delete_pos_'+m+'" style="border: 1px solid;">'
+                        +'<p class="float-right" onclick="delete_team_pos('+m+')"><i class="fa fa-window-close" aria-hidden="true"></i></p>'
+                            + '<div class="rounded shadow-sm py-5 px-4">'
+                            + '<img src="'+jsonTeam.url+'" alt="" width="175" class="img-fluid rounded-circle mb-3 img-thumbnail">'
+                            + '<h5 class="mb-0">'+jsonTeam.name+'</h5><span class="small text-uppercase text-muted">'+jsonTeam.position+'</span>'
+                            + '</div>'
+                            + '</div>';
+                    }
+            
+            
+            
+            
+                
+               
+                  
+                  
+                  }
+                  else{
+                      
+                  }
+                  }
+                  else{
+                   if(m < (array.length))
+                  {
+                  var jsoncreate = array[m];
+                  var jsonTeam = JSON.parse(jsoncreate);
+                  
+                  old_team_members_list_array.push(jsonTeam);
+                  
+                  if (m == 0) {
+                        DataTeam = DataTeam + '<div class="row">'
+                            + '<div class="col-lg-4 col-sm-6 mb-5" id="actual_delete_pos_'+m+'" style="border: 1px solid;">'
+                            +'<p class="float-right" onclick="delete_team_pos('+m+')"><i class="fa fa-window-close" aria-hidden="true"></i></p>'
+                            + '<div class="rounded shadow-sm py-5 px-4">'
+                            + '<img src="'+jsonTeam.url+'" alt="" width="175" class="img-fluid rounded-circle mb-3 img-thumbnail">'
+                            + '<h5 class="mb-0">'+jsonTeam.name+'</h5><span class="small text-uppercase text-muted">'+jsonTeam.position+'</span>'
+                            + '</div>'
+                            + '</div>';
+                    }
+                    else {
+                        DataTeam = DataTeam + '<div class="col-lg-4 col-sm-6 mb-5" id="actual_delete_pos_'+m+'" style="border: 1px solid;">'
+                        +'<p class="float-right" onclick="delete_team_pos('+m+')"><i class="fa fa-window-close" aria-hidden="true"></i></p>'
+                            + '<div class="rounded shadow-sm py-5 px-4">'
+                            + '<img src="'+jsonTeam.url+'" alt="" width="175" class="img-fluid rounded-circle mb-3 img-thumbnail">'
+                            + '<h5 class="mb-0">'+jsonTeam.name+'</h5><span class="small text-uppercase text-muted">'+jsonTeam.position+'</span>'
+                            + '</div>'
+                            + '</div>';
+                    }
+            
+            
+            
+            
+                
+               
+                  
+                  
+                  }
+                  else{
+                      
+                  }
+                  }
+              }
+                
+                 document.getElementById("old_team_members_list").innerHTML = "</div>" + DataTeam;
+                 
+                 $('#update_location_db_id').val(proid);
+                 
+                 $('#project_idea').val(arrayDataForSingleListing[0].crowdfund_project_idea_description);
+                 $('#videolink').val(arrayDataForSingleListing[0].crowdfund_project_idea_video_url);
+        
+        
+        
+
+    
+            }
+    });
+    
+    
+    function delete_old_pdf(id)
+    {
+        var actualid = id.replace("remove_position_", "");
+        
+        $('#delete_this_pdf_'+actualid).remove();
+        
+        oldPDFListArray.splice(id, 1);
+        console.log(oldPDFListArray);
+        
+        oldPosition = oldPosition - 1;
+        
+    }
+    
+    
+    function delete_team_pos(pos)
+    {
+        $('#actual_delete_pos_'+pos).remove();
+        old_team_members_list_array.splice(pos, 1);
+        console.log(old_team_members_list_array);
+    }
+
+
+function delete_my_this_div(deleteid)
+{
+    $('#team-'+deleteid).remove();
+    lastmemebernumber = lastmemebernumber - 1;
+}
+
+
+  </script>
+
+    
+    </html>

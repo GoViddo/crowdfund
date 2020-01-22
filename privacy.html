@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="https://cdn-content-hub.crowdcube.com/static/c3/explore/dist/main.61cfd96fd89a529a461e.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdn-content-hub.crowdcube.com/static/c3/explore/dist/components.155bf6eb585db41fae70.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdn-content-hub.crowdcube.com/static/c3/explore/dist/blocks.0ecca0c465d40357b9ca.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://cdn-content-hub.crowdcube.com/static/c3/explore/dist/ui.b83ad775f9e361f41aaf.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="assets/css/margin_top.css">
+    <link rel="stylesheet" href="assets/css/margin_bottom.css">
+    <link rel="stylesheet" href="assets/css/margin_left.css">
+    <link rel="stylesheet" href="assets/css/margin_right.css">
+    <link rel="stylesheet" href="assets/css/login-register.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script>
+        w3IncludeHTML();
+    </script>
+
+<script src="assets/js/login_modal.js"></script>
+
+<style rel="stylesheet" lang="css">
+            *, ::after, ::before {
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+mark {
+  background: #ff0;
+  color: #FFF; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace;
+  font-size: 1em; }
+
+input {
+  line-height: normal; }
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: 700; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+body, html {
+  font-size: 100%;
+  height: 100%; }
+
+body {
+  color: #FFFFFF;
+  cursor: auto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  position: relative; }
+
+a:hover {
+  cursor: pointer; }
+
+img {
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  max-width: 100%; }
+
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.clearfix::after, .clearfix::before {
+  content: " ";
+  display: table; }
+
+.clearfix::after {
+  clear: both; }
+
+.hide {
+  display: none; }
+
+.invisible {
+  visibility: hidden; }
+
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+.row, select {
+  width: 100%; }
+
+.row {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 76.5rem; }
+
+.column, .columns {
+  float: left;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+  width: 100%; }
+
+@media only screen {
+  .column, .columns {
+    float: left;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    position: relative; }
+  .small-1 {
+    width: 8.33333%; }
+  .small-2 {
+    width: 16.66667%; }
+  .small-3 {
+    width: 25%; }
+  .small-4 {
+    width: 33.33333%; }
+  .small-5 {
+    width: 41.66667%; }
+  .small-6 {
+    width: 50%; }
+  .small-7 {
+    width: 58.33333%; }
+  .small-8 {
+    width: 66.66667%; }
+  .small-9 {
+    width: 75%; }
+  .small-10 {
+    width: 83.33333%; }
+  .small-11 {
+    width: 91.66667%; }
+  .small-12 {
+    width: 100%; } }
+
+@media only screen and (min-width: 40.0625em) {
+  .column {
+    margin-bottom: 2em; }
+  .column, .columns {
+    float: left;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    position: relative; }
+  .medium-1 {
+    width: 8.33333%; }
+  .medium-2 {
+    width: 16.66667%; }
+  .medium-3 {
+    width: 25%; }
+  .medium-4 {
+    width: 33.33333%; }
+  .medium-5 {
+    width: 41.66667%; }
+  .medium-6 {
+    width: 49.55%; }
+  .medium-7 {
+    width: 58.33333%; }
+  .medium-8 {
+    width: 66.66667%; }
+  .medium-9 {
+    width: 75%; }
+  .medium-10 {
+    width: 83.33333%; }
+  .medium-11 {
+    width: 91.66667%; }
+  .medium-12 {
+    width: 100%; } }
+
+@media only screen and (min-width: 64.0625em) {
+  .column, .columns {
+    float: left;
+    padding-left: .9375rem;
+    padding-right: .9375rem;
+    position: relative; }
+  .large-1 {
+    width: 8.33333%; }
+  .large-2 {
+    width: 16.66667%; }
+  .large-3 {
+    width: 25%; }
+  .large-4 {
+    width: 33.33333%; }
+  .large-5 {
+    width: 41.66667%; }
+  .large-6 {
+    width: 49.55%; }
+  .large-7 {
+    width: 58.33333%; }
+  .large-8 {
+    width: 66.66667%; }
+  .large-9 {
+    width: 75%; }
+  .large-10 {
+    width: 83.33333%; }
+  .large-11 {
+    width: 91.66667%; }
+  .large-12 {
+    width: 100%; } }
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+  .sr-only-focusable:active, .sr-only-focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+            clip-path: none;
+    height: auto;
+    overflow: visible;
+    position: static;
+    white-space: normal;
+    width: auto; }
+
+.cc-component {
+  height: 100%;
+  width: 100%; }
+
+.img-cover {
+  height: inherit;
+  left: 50%;
+  max-width: none;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  position: relative;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: auto; }
+
+a {
+  color: #FFFFFF; }
+
+blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #ff5100;
+  line-height: inherit;
+  text-decoration: none; }
+
+a:focus, a:hover {
+  color: #cc4100; }
+
+a img {
+  border: none; }
+
+p {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility; }
+
+p aside {
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.35; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FFFFFF;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  margin-top: 0;
+  text-rendering: optimizeLegibility; }
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  color: #030352;
+  font-size: 80%;
+  line-height: 0; }
+
+h1 {
+  font-size: 1.75rem; }
+
+h2 {
+  font-size: 1.4rem; }
+
+h3 {
+  font-size: 1.2rem; }
+
+h4 {
+  font-size: 1.1rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 1rem; }
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  height: 0;
+  margin: 1.875rem 0 1.8125rem; }
+
+em, i {
+  font-style: italic; }
+
+b, em, i, strong {
+  line-height: inherit; }
+
+b, strong {
+  font-weight: 700; }
+
+small {
+  font-size: 80%;
+  line-height: inherit; }
+
+code {
+  background-color: #d2f4aa;
+  border: 1px solid #beef86;
+  color: #333;
+  font-family: Consolas, Liberation Mono, Courier, monospace;
+  font-weight: 400;
+  padding: .125rem .3125rem .0625rem; }
+
+dl, ol, ul {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style-position: outside;
+  margin-bottom: 1.25rem; }
+
+ul {
+  margin-left: 1.1rem; }
+
+ul li ol, ul li ul {
+  margin-bottom: 0;
+  margin-left: 1.25rem; }
+
+ol {
+  margin-left: 1.4rem; }
+
+ol li ol, ol li ul {
+  margin-bottom: 0;
+  margin-left: 1.25rem; }
+
+dl dt {
+  font-weight: 700;
+  margin-bottom: .3rem; }
+
+dl dd {
+  margin-bottom: .75rem; }
+
+abbr, acronym {
+  color: #030352;
+  cursor: help;
+  font-size: 90%;
+  text-transform: uppercase; }
+
+abbr {
+  text-transform: none; }
+
+abbr[title] {
+  border-bottom: 1px dotted #ddd; }
+
+blockquote {
+  border-left: 0;
+  margin: 0 0 1.25rem;
+  padding: 0; }
+
+blockquote cite {
+  color: #030352;
+  display: block;
+  font-size: 1em; }
+
+blockquote cite::before {
+  content: "\2014    "; }
+
+blockquote cite a, blockquote cite a:visited {
+  color: #030352; }
+
+blockquote, blockquote p {
+  color: #030352;
+  line-height: 1.5; }
+
+@media only screen and (min-width: 40.0625em) {
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15; }
+  h1 {
+    font-size: 2.375rem; }
+  h2 {
+    font-size: 2rem; }
+  h3 {
+    font-size: 1.5rem; }
+  h4 {
+    font-size: 1.25rem; }
+  h5 {
+    font-size: 1.3rem; }
+  h6 {
+    font-size: 1rem; } }
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+            transform: perspective(400px) rotateY(90deg); }
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+            transform: perspective(400px) rotateY(-10deg); }
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+            transform: perspective(400px) rotateY(10deg); }
+  to {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+            transform: perspective(400px) rotateY(0deg); } }
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotateY(90deg);
+            transform: perspective(400px) rotateY(90deg); }
+  40% {
+    -webkit-transform: perspective(400px) rotateY(-10deg);
+            transform: perspective(400px) rotateY(-10deg); }
+  70% {
+    -webkit-transform: perspective(400px) rotateY(10deg);
+            transform: perspective(400px) rotateY(10deg); }
+  to {
+    -webkit-transform: perspective(400px) rotateY(0deg);
+            transform: perspective(400px) rotateY(0deg); } }
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.cc-container {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3.125rem;
+  padding-top: 4.375rem; }
+
+td, th {
+  border: 0; }
+
+.cc-pageContainer {
+  overflow: hidden;
+  position: relative;
+  z-index: 97; }
+  @media screen and (min-width: 768px) {
+    .cc-pageContainer {
+      padding-top: 6.1em; } }
+
+.cc-pageContainerSmall {
+  margin: 0 auto;
+  max-width: 23rem;
+  padding-left: 0;
+  padding-right: 0; }
+
+@media all and (max-width: 24rem) {
+  .cc-pageContainerSmall {
+    padding-left: .875rem;
+    padding-right: .875rem; } }
+
+.cc-pageContainerMedium {
+  margin: 0 auto;
+  max-width: 48rem;
+  padding-left: 0;
+  padding-right: 0; }
+
+@media all and (max-width: 49rem) {
+  .cc-pageContainerMedium {
+    padding-left: .875rem;
+    padding-right: .875rem; } }
+
+.cc-pageContainerLarge {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  z-index: 1070; }
+
+@media all and (max-width: 76rem) {
+  .cc-pageContainerLarge {
+    padding-left: .875rem;
+    padding-right: .875rem; } }
+
+.cc-viewContainer {
+  background-color: #fff;
+  overflow: hidden; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.cc-mainNavigation__container {
+  position: relative;
+  z-index: 100; }
+  .cc-mainNavigation__container .cc-mainNavigation__navigationUser .cc-popout__panel {
+    position: absolute;
+    right: 10px;
+    top: 70px; }
+    @media screen and (min-width: 1217px) {
+      .cc-mainNavigation__container .cc-mainNavigation__navigationUser .cc-popout__panel {
+        right: -5px; } }
+  .cc-mainNavigation__container .cc-mainNavigation__navigationUser .cc-icon > svg {
+    height: 1em;
+    margin: .25em;
+    width: 1em; }
+  .cc-mainNavigation__container .cc-mainNavigation__navigationItem a.active {
+    color: #0024ec; }
+  @media screen and (min-width: 768px) {
+    .cc-mainNavigation__container {
+      left: 0;
+      position: fixed;
+      right: 0; }
+      .sticky-PageNavigation .cc-mainNavigation__container .cc-mainNavigation,
+      .sticky-CategoryNavigation .cc-mainNavigation__container .cc-mainNavigation {
+        height: 80px; } }
+
+@media screen and (min-width: 768px) {
+  .cc-container__home {
+    padding: 3.75em 0; } }
+
+.cc-container__home > .cc-block:last-of-type {
+  margin-bottom: 0; }
+
+.cc-container__category {
+  padding: 0 0 3.75em; }
+
+.cc-container__article {
+  margin: 1em auto;
+  max-width: 37.5em; }
+  .cc-container__article header h2 {
+    margin-bottom: .25em; }
+  .cc-container__article header p {
+    color: #747474;
+    font-size: .9em; }
+  .cc-container__article figure {
+    margin: 0 auto 1.5em; }
+    .cc-container__article figure img {
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 10px 10px -10px;
+      display: block;
+      overflow: hidden;
+      width: 100%; }
+
+.cc-container__caseStudy .cc-caseStudy__info {
+  background-color: #fbfbfb;
+  font-size: 1.125em;
+  font-weight: 900;
+  padding: 1.875em 0;
+  text-align: center; }
+
+.cc-page > .cc-block:last-of-type {
+  margin-bottom: 0; }
+
+.cc-simplePage {
+  padding: 4em 0; }
+  .cc-simplePage__intro {
+    margin-bottom: 3em; }
+    .cc-simplePage__intro p {
+      font-size: 1.1em; }
+
+[data-react-app="AlgoliaSearchForm"] {
+  width: 100%; }
+
+.cc-searchForm {
+  position: relative;
+  width: 296px; }
+  @media screen and (max-width: 1023px) {
+    .cc-searchForm {
+      margin: auto;
+      width: 90vw; } }
+  .cc-searchForm__Widget {
+    background-color: #fafafa;
+    border: 1px solid #e4e4e4;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: flex;
+    height: 40px;
+    margin: 0;
+    z-index: 1040; }
+    .cc-searchForm__Widget > div:nth-of-type(2) {
+      -webkit-box-flex: 1;
+              flex-grow: 1; }
+  .cc-searchForm .algolia-autocomplete {
+    display: block !important;
+    height: 100%;
+    position: static !important; }
+    .cc-searchForm .algolia-autocomplete pre {
+      display: none !important; }
+    .cc-searchForm .algolia-autocomplete .aa-dropdown-menu {
+      background-color: #fafafa;
+      border-radius: 0 0 20px 20px;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 10px 10px -10px;
+      padding: 1em;
+      padding-top: 2em;
+      -webkit-transform: translateY(-1em);
+              transform: translateY(-1em);
+      z-index: -1 !important; }
+    .cc-searchForm .algolia-autocomplete .aa-suggestion {
+      font-size: 0.8rem; }
+      .cc-searchForm .algolia-autocomplete .aa-suggestion a {
+        color: #29383c; }
+        .cc-searchForm .algolia-autocomplete .aa-suggestion a:hover {
+          color: #ff5100; }
+  .cc-searchForm__searchInput {
+    background-color: transparent;
+    border: 0;
+    display: block;
+    height: 40px;
+    left: 100px;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: absolute !important;
+    top: 0;
+    width: 158px; }
+    .cc-searchForm__searchInput:focus {
+      border: 0;
+      box-shadow: none;
+      outline: 0; }
+  .cc-searchForm__searchButton {
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    display: block;
+    height: 32px;
+    margin: 3px 3px 3px auto;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 32px; }
+    .cc-searchForm__searchButton:focus {
+      outline: 0; }
+  .cc-searchForm:hover .cc-searchForm__searchButton {
+    background-color: #ff5100; }
+    .cc-searchForm:hover .cc-searchForm__searchButton svg {
+      fill: #fff;
+      -webkit-transition: 0.3s;
+      transition: 0.3s; }
+  .cc-searchForm__sectionButton {
+    color: #030352 !important;
+    display: block;
+    font-size: .8em;
+    font-weight: bold;
+    padding: .75em .5em;
+    text-align: center;
+    white-space: nowrap; }
+    .cc-searchForm__sectionButton .cc-icon {
+      height: 19px; }
+      .cc-searchForm__sectionButton .cc-icon svg {
+        margin: 0 .25em; }
+  .cc-searchForm__sectionFilter {
+    background-color: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 20px;
+    margin: -1px 0 0 -1px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    width: 100px; }
+    .cc-searchForm__sectionFilter.active, .cc-searchForm__sectionFilter:hover {
+      background-color: #e4e4e4;
+      box-shadow: rgba(0, 0, 0, 0.3) 0 10px 10px -10px; }
+  .cc-searchForm__sectionList {
+    padding: 0 .5em .5em; }
+    .cc-searchForm__sectionList .cc-button {
+      background-color: #fff;
+      border-color: #fff;
+      display: block;
+      margin: 1em auto; }
+      .cc-searchForm__sectionList .cc-button.active, .cc-searchForm__sectionList .cc-button:hover {
+        background-color: #747474;
+        border-color: #747474;
+        color: #fff; }
+
+[data-react-app="Button"] {
+  display: inline-block;
+  margin: 0 .5em .5em; }
+
+.cc-button,
+.button {
+  background-color: #e4e4e4;
+  border: 2px solid;
+  border-color: #e4e4e4;
+  border-radius: 21px;
+  box-sizing: border-box;
+  color: #747474;
+  cursor: pointer;
+  display: inline-block;
+  font-family: akkurat, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  overflow: hidden;
+  padding: .55rem 1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transition-property: background-color, border-color, color, opacity;
+  transition-property: background-color, border-color, color, opacity; }
+  @media screen and (min-width: 480px) {
+    .cc-button,
+    .button {
+      padding: .55rem 2rem; } }
+  .cc-button.active, .cc-button:hover, .cc-button:focus,
+  .button.active,
+  .button:hover,
+  .button:focus {
+    background-color: #747474;
+    border-color: #747474;
+    color: #fff; }
+  .cc-button.simple,
+  .button.simple {
+    border-color: transparent !important; }
+  .cc-button.tiny,
+  .button.tiny {
+    font-size: .7em;
+    margin-right: .5em;
+    padding: .25em 1em; }
+  .cc-button.primary,
+  .button.primary {
+    background-color: transparent;
+    border-color: #030352;
+    color: #030352; }
+    .cc-button.primary.active, .cc-button.primary:hover, .cc-button.primary:focus,
+    .button.primary.active,
+    .button.primary:hover,
+    .button.primary:focus {
+      background-color: #030352;
+      border-color: #030352;
+      color: #fff; }
+    .cc-button.primary.alternative,
+    .button.primary.alternative {
+      background-color: #030352;
+      border-color: #030352;
+      color: #fff; }
+      .cc-button.primary.alternative.active, .cc-button.primary.alternative:hover, .cc-button.primary.alternative:focus,
+      .button.primary.alternative.active,
+      .button.primary.alternative:hover,
+      .button.primary.alternative:focus {
+        background-color: transparent;
+        border-color: #030352;
+        color: #030352; }
+  .cc-button.secondary,
+  .button.secondary {
+    background-color: #ff5100;
+    border-color: #ff5100;
+    color: #fff; }
+    .cc-button.secondary.active, .cc-button.secondary:hover, .cc-button.secondary:focus,
+    .button.secondary.active,
+    .button.secondary:hover,
+    .button.secondary:focus {
+      background-color: #dd4600;
+      border-color: #dd4600;
+      color: #fff; }
+    .cc-button.secondary.alternative,
+    .button.secondary.alternative {
+      background-color: transparent;
+      border-color: #ff5100;
+      color: #ff5100; }
+      .cc-button.secondary.alternative.active, .cc-button.secondary.alternative:hover, .cc-button.secondary.alternative:focus,
+      .button.secondary.alternative.active,
+      .button.secondary.alternative:hover,
+      .button.secondary.alternative:focus {
+        background-color: #ff5100;
+        border-color: #ff5100;
+        color: #fff; }
+  .cc-button:focus,
+  .button:focus {
+    outline: 0; }
+  @media screen and (max-width: 479px) {
+    .cc-button,
+    .button {
+      display: block; } }
+
+.cc-masthead {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  margin: 4em 0;
+  position: relative; }
+  .cc-masthead__bgMask {
+    background-color: rgba(0, 0, 0, 0.33);
+    border-radius: 20px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1; }
+  .cc-masthead__heading {
+    margin-bottom: 1em;
+    position: relative;
+    z-index: 2; }
+    .cc-masthead__heading.small {
+      font-size: 2.75em; }
+    .cc-masthead__heading.large {
+      font-size: 3.25rem; }
+      @media screen and (max-width: 479px) {
+        .cc-masthead__heading.large {
+          font-size: 2.25rem; } }
+  .cc-masthead__content {
+    position: relative;
+    z-index: 2; }
+  .cc-masthead__introtext {
+    margin-bottom: 1em; }
+    .cc-masthead__introtext p {
+      font-size: 1.2em;
+      margin-bottom: 1.75em; }
+  .cc-masthead__cover {
+    display: none;
+    position: relative;
+    z-index: 2; }
+  .cc-masthead__video {
+    display: none; }
+  .cc-masthead__image {
+    display: none; }
+  .cc-masthead__buttons.text-white .cc-button.primary {
+    border-color: #fff;
+    color: #fff; }
+    .cc-masthead__buttons.text-white .cc-button.primary:hover, .cc-masthead__buttons.text-white .cc-button.primary:focus {
+      background-color: #fff;
+      color: #030352; }
+  .cc-masthead__buttons.text-white .cc-button.secondary:hover, .cc-masthead__buttons.text-white .cc-button.secondary:focus {
+    background-color: #cc4100;
+    border-color: #cc4100;
+    color: #fff; }
+  .cc-masthead--with-bg-color {
+    border-radius: 20px;
+    padding: 3em; }
+  .cc-masthead--with-bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding: 3em; }
+  .cc-masthead--with-cover {
+    min-height: 465px; }
+  .cc-masthead--with-cover .cc-masthead__heading {
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .cc-masthead--with-cover .cc-masthead__heading {
+        -webkit-box-ordinal-group: 3;
+                order: 2;
+        width: 50%; } }
+  .cc-masthead--with-cover .cc-masthead__content {
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .cc-masthead--with-cover .cc-masthead__content {
+        padding-right: 2em;
+        width: 50%; } }
+  .cc-masthead--with-cover .cc-masthead__cover {
+    display: block;
+    height: 100%;
+    -webkit-box-ordinal-group: 3;
+            order: 2;
+    width: 100%; }
+    @media screen and (min-width: 768px) {
+      .cc-masthead--with-cover .cc-masthead__cover {
+        bottom: -1em;
+        height: auto;
+        -webkit-box-ordinal-group: 2;
+                order: 1;
+        position: absolute;
+        right: 0;
+        top: -3em;
+        width: 50%; } }
+  .cc-masthead--with-cover .cc-masthead__video {
+    display: block;
+    height: 100%;
+    position: relative; }
+    @media screen and (min-width: 1200px) {
+      .cc-masthead--with-cover .cc-masthead__video {
+        margin-right: -30px;
+        right: -10px; } }
+    .cc-masthead--with-cover .cc-masthead__video [data-react-app="VideoButton"] {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
+      z-index: 1; }
+      .cc-masthead--with-cover .cc-masthead__video [data-react-app="VideoButton"] > img {
+        width: 100%; }
+      .cc-masthead--with-cover .cc-masthead__video [data-react-app="VideoButton"] .cc-icon {
+        width: 60px; }
+        .cc-masthead--with-cover .cc-masthead__video [data-react-app="VideoButton"] .cc-icon__symbol {
+          width: 70px; }
+        @media screen and (min-width: 768px) {
+          .cc-masthead--with-cover .cc-masthead__video [data-react-app="VideoButton"] .cc-icon {
+            width: 65px; } }
+  .cc-masthead--with-cover .cc-masthead__image {
+    display: block;
+    height: 100%;
+    position: relative; }
+    @media screen and (min-width: 768px) {
+      .cc-masthead--with-cover .cc-masthead__image {
+        -webkit-box-align: end;
+                align-items: flex-end;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-flex: 1;
+                flex: 1 1;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column;
+        -webkit-box-ordinal-group: 3;
+                order: 2; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-1 .cc-masthead__heading {
+      width: 45%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-1 .cc-masthead__content {
+      width: 45%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-1 .cc-masthead__cover {
+      width: 55%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-2-3 .cc-masthead__heading {
+      width: 52%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-2-3 .cc-masthead__content {
+      width: 52%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-2-3 .cc-masthead__cover {
+      width: 48%; } }
+  .cc-masthead--with-mask-4 {
+    min-height: 390px; }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-6-2 .cc-masthead__heading {
+      width: 45%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-6-2 .cc-masthead__content {
+      width: 45%; } }
+  @media screen and (min-width: 768px) {
+    .cc-masthead--with-mask-6-2 .cc-masthead__cover {
+      width: 55%; } }
+
+.cc-mask {
+  width: 100%; }
+
+.cc-image-mask {
+  -webkit-filter: drop-shadow(0 13px 8px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(0 13px 8px rgba(0, 0, 0, 0.2)); }
+  .cc-image-mask-1 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .cc-image-mask-1 {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 768px) {
+      .cc-image-mask-1 {
+        max-width: 662px; } }
+  .cc-image-mask-2 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .cc-image-mask-2 {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 768px) {
+      .cc-image-mask-2 {
+        float: left;
+        left: 9%;
+        position: absolute;
+        top: 200px;
+        width: 280px; } }
+  .cc-image-mask-3 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .cc-image-mask-3 {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 768px) {
+      .cc-image-mask-3 {
+        display: inline-block;
+        float: left;
+        height: 487px;
+        margin-top: -179px;
+        width: 298px; } }
+  .cc-image-mask-4 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+  .cc-image-mask-5 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .cc-image-mask-5 {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 768px) {
+      .cc-image-mask-5 {
+        margin-left: 10%;
+        margin-top: 20px;
+        max-height: 262px;
+        width: 90%; } }
+    @media screen and (min-width: 1024px) {
+      .cc-image-mask-5 {
+        max-width: 380px;
+        position: absolute;
+        right: 10%;
+        top: 17%; } }
+    @media screen and (min-width: 1200px) {
+      .cc-image-mask-5 {
+        right: 22%; } }
+  .cc-image-mask-6 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .cc-image-mask-6 {
+        margin-bottom: 20px; } }
+    @media screen and (min-width: 768px) {
+      .cc-image-mask-6 {
+        position: absolute;
+        right: -100px; } }
+  .cc-image-mask-2-3 {
+    -webkit-transition: top 300ms ease, left 300ms ease;
+    transition: top 300ms ease, left 300ms ease;
+    width: 100%; }
+    @media screen and (max-width: 767px) {
+      .cc-image-mask-2-3 svg rect {
+        -webkit-clip-path: url("#mask3");
+                clip-path: url("#mask3"); } }
+
+.cc-shape {
+  mix-blend-mode: normal;
+  overflow: visible;
+  position: absolute;
+  z-index: -1000; }
+
+icon-sprite svg {
+  fill: transparent;
+  stroke: #ff5100;
+  stroke-width: .75; }
+
+icon-sprite[type="idea-bulb"] svg {
+  margin: 0 -5px; }
+
+h1 icon-sprite[type="robot"] svg {
+  position: absolute;
+  right: -220px;
+  stroke-width: .3;
+  top: -80px;
+  -webkit-transform: rotate(0deg) scale(1.5) rotate(5deg);
+          transform: rotate(0deg) scale(1.5) rotate(5deg); }
+
+h1 icon-sprite[type="ai"] svg {
+  position: absolute;
+  right: -285px;
+  stroke-width: .3;
+  top: -90px;
+  -webkit-transform: rotate(0deg) scale(1.3) rotate(20deg);
+          transform: rotate(0deg) scale(1.3) rotate(20deg); }
+
+h1 icon-sprite[type="ai-and-robot"] svg {
+  position: absolute;
+  right: -285px;
+  stroke-width: .3;
+  top: -90px;
+  -webkit-transform: rotate(0deg) scale(1.3) rotate(20deg);
+          transform: rotate(0deg) scale(1.3) rotate(20deg); }
+
+h1 icon-sprite[type="about-us-idea-dream"] svg {
+  left: -42px;
+  position: absolute;
+  stroke-width: .3;
+  top: -74px;
+  -webkit-transform: rotate(0deg) scale(1.5);
+          transform: rotate(0deg) scale(1.5); }
+  @media screen and (max-width: 479px) {
+    h1 icon-sprite[type="about-us-idea-dream"] svg {
+      left: -75px;
+      top: -85px;
+      -webkit-transform: rotate(0deg) scale(1);
+              transform: rotate(0deg) scale(1); } }
+
+h1 icon-sprite[type="underline-2"] svg {
+  left: -92px;
+  position: absolute;
+  stroke-width: .3;
+  top: -19px;
+  -webkit-transform: rotate(4deg) scale(1.1);
+          transform: rotate(4deg) scale(1.1); }
+
+h1 icon-sprite[type="fuel-future-hero"] svg {
+  left: -80px;
+  position: absolute;
+  stroke-width: .5;
+  top: -58px;
+  -webkit-transform: rotate(45deg) scale(1.3);
+          transform: rotate(45deg) scale(1.3); }
+
+h1 icon-sprite[type="food-and-drink"] svg {
+  left: 850px;
+  position: absolute;
+  stroke-width: .4;
+  top: 802px;
+  -webkit-transform: rotate(19deg) scale(8);
+  transform: rotate(19deg) scale(8); }
+
+h1 icon-sprite[type="consumer-internet"] svg {
+  left: 303px;
+  position: absolute;
+  stroke-width: .5;
+  top: 363px;
+  -webkit-transform: rotate(29deg) scale(3.8);
+  transform: rotate(29deg) scale(3.8); }
+
+h1 icon-sprite[type="consumer-internet"] svg {
+  left: 303px;
+  position: absolute;
+  stroke-width: .5;
+  top: 363px;
+  -webkit-transform: rotate(29deg) scale(3.8);
+  transform: rotate(29deg) scale(3.8); }
+
+h1 icon-sprite[type="fintech"] svg {
+  left: -50px;
+  position: absolute;
+  stroke-width: .3;
+  top: -72px;
+  -webkit-transform: rotate(7deg) scale(1.4);
+  transform: rotate(7deg) scale(1.4); }
+
+h1 icon-sprite[type="underline"] svg {
+  height: 400px;
+  stroke-linecap: round;
+  stroke-width: .65;
+  -webkit-transform: translate(-15px, -125px);
+          transform: translate(-15px, -125px); }
+
+h1 icon-sprite[type="passion-love-heart"] svg {
+  height: 140px;
+  position: absolute;
+  stroke-linecap: round;
+  stroke-width: .5;
+  -webkit-transform: translate(-92px, -30px) rotate(30deg);
+          transform: translate(-92px, -30px) rotate(30deg); }
+
+@media screen and (max-width: 479px) {
+  h1 icon-sprite[type="passion-love-heart"] {
+    display: none; } }
+
+h3 icon-sprite[type="question-mark"] {
+  display: inline-block;
+  line-height: initial;
+  vertical-align: middle; }
+  h3 icon-sprite[type="question-mark"] svg {
+    height: 110px;
+    position: absolute;
+    stroke-width: .6;
+    -webkit-transform: translate(-25%, -50%);
+            transform: translate(-25%, -50%);
+    width: 85px; }
+
+h5 icon-sprite,
+p icon-sprite {
+  display: inline-block;
+  line-height: initial;
+  vertical-align: middle; }
+  h5 icon-sprite[type="arrow"],
+  p icon-sprite[type="arrow"] {
+    vertical-align: initial; }
+    h5 icon-sprite[type="arrow"] svg,
+    p icon-sprite[type="arrow"] svg {
+      height: 330%;
+      stroke-width: .4;
+      -webkit-transform: translate(-20%, -22%);
+              transform: translate(-20%, -22%);
+      width: 300%; }
+  h5 icon-sprite[type="underline-2"],
+  p icon-sprite[type="underline-2"] {
+    vertical-align: initial; }
+    h5 icon-sprite[type="underline-2"] svg,
+    p icon-sprite[type="underline-2"] svg {
+      height: 400%;
+      stroke-width: .6px;
+      -webkit-transform: translate(-38%, -20%);
+              transform: translate(-38%, -20%);
+      width: 400%; }
+  h5 icon-sprite[type="burst-mark"],
+  p icon-sprite[type="burst-mark"] {
+    vertical-align: initial; }
+    h5 icon-sprite[type="burst-mark"] svg,
+    p icon-sprite[type="burst-mark"] svg {
+      height: 500%;
+      stroke-width: .3;
+      -webkit-transform: translate(-38%, -41%) scale(1.4);
+              transform: translate(-38%, -41%) scale(1.4);
+      width: 500%; }
+  h5 icon-sprite[type="cloud"], h5 icon-sprite[type="outline-mark"], h5 icon-sprite[type="bubble-mark"],
+  p icon-sprite[type="cloud"],
+  p icon-sprite[type="outline-mark"],
+  p icon-sprite[type="bubble-mark"] {
+    vertical-align: initial; }
+    h5 icon-sprite[type="cloud"] svg, h5 icon-sprite[type="outline-mark"] svg, h5 icon-sprite[type="bubble-mark"] svg,
+    p icon-sprite[type="cloud"] svg,
+    p icon-sprite[type="outline-mark"] svg,
+    p icon-sprite[type="bubble-mark"] svg {
+      height: 330%;
+      stroke-width: .4;
+      -webkit-transform: translate(-33.3%, -33.33%);
+              transform: translate(-33.3%, -33.33%);
+      width: 300%; }
+  h5 icon-sprite svg,
+  p icon-sprite svg {
+    height: 32px;
+    stroke-width: .85;
+    width: 32px; }
+
+h5 br + icon-sprite[type="underline-2"] svg,
+p br + icon-sprite[type="underline-2"] svg {
+  -webkit-transform: translate(-28%, -20%);
+          transform: translate(-28%, -20%); }
+
+.cc-categoryNavigation {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 21px 10px -31px;
+  min-height: 80px;
+  padding: 0 1em;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  @media screen and (max-width: 767px) {
+    .cc-categoryNavigation {
+      padding: 0 1em 1em; } }
+  .cc-categoryNavigation__container {
+    margin: 0 auto;
+    max-width: 75rem;
+    position: relative;
+    z-index: 1090; }
+    @media screen and (max-width: 1023px) {
+      .cc-categoryNavigation__container {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+                flex-direction: column-reverse; } }
+  .cc-categoryNavigation__row {
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex;
+    padding: 0; }
+    @media screen and (max-width: 1023px) {
+      .cc-categoryNavigation__row {
+        -webkit-box-align: start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column; } }
+  @media screen and (max-width: 1023px) {
+    .cc-categoryNavigation .cc-breadcrumbs__items {
+      margin: 1em 0 0; } }
+  .cc-categoryNavigation__heading {
+    margin-bottom: 0; }
+    @media screen and (max-width: 1023px) {
+      .cc-categoryNavigation__heading {
+        margin-bottom: .5em;
+        -webkit-box-ordinal-group: 3;
+                order: 2; } }
+  .cc-categoryNavigation__navigation {
+    display: -webkit-box;
+    display: flex;
+    margin: 0;
+    padding: 0 2em;
+    width: 100%; }
+    @media screen and (max-width: 1023px) {
+      .cc-categoryNavigation__navigation {
+        -webkit-box-ordinal-group: 4;
+                order: 3;
+        padding: 0; } }
+    @media screen and (max-width: 767px) {
+      .cc-categoryNavigation__navigation {
+        flex-wrap: wrap; } }
+    .cc-categoryNavigation__navigationItem {
+      -webkit-box-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: flex;
+      height: 80px;
+      list-style: none;
+      margin: 0 1em 0 0; }
+      @media screen and (max-width: 767px) {
+        .cc-categoryNavigation__navigationItem {
+          margin-bottom: 1em; } }
+      .cc-categoryNavigation__navigationItem:first-of-type {
+        padding-left: 0; }
+      .cc-categoryNavigation__navigationItem a {
+        background-color: #f4f4f4;
+        border-radius: 30px;
+        color: #fff;
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 700;
+        padding: .25em 1.25em;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+        .cc-categoryNavigation__navigationItem a.active {
+          background-color: #747474;
+          color: #fff; }
+      @media screen and (max-width: 767px) {
+        .cc-categoryNavigation__navigationItem {
+          height: auto;
+          white-space: nowrap; } }
+      .cc-categoryNavigation__navigationItem a:hover,
+      .cc-categoryNavigation__navigationItem a:focus {
+        background-color: #747474;
+        color: #fff; }
+  .cc-categoryNavigation__search {
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex; }
+    @media screen and (min-width: 1024px) {
+      .cc-categoryNavigation__search {
+        margin-left: auto; } }
+    @media screen and (max-width: 1023px) {
+      .cc-categoryNavigation__search {
+        margin: 1em auto;
+        -webkit-box-ordinal-group: 2;
+                order: 1; } }
+
+.cc-pageNavigation {
+  box-shadow: rgba(0, 0, 0, 0.3) 0 21px 10px -31px;
+  margin-bottom: 6em;
+  min-height: 80px;
+  padding: 0 1em;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  @media screen and (max-width: 767px) {
+    .cc-pageNavigation {
+      margin-bottom: 2em;
+      padding: 0 1em 1em; } }
+  .cc-pageNavigation__container {
+    display: -webkit-box;
+    display: flex;
+    margin: 0 auto;
+    max-width: 75rem;
+    padding: 0;
+    position: relative;
+    z-index: 1090; }
+    @media screen and (max-width: 1023px) {
+      .cc-pageNavigation__container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+                flex-direction: column; } }
+    @media screen and (max-width: 767px) {
+      .cc-pageNavigation__container::after {
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(50%, white));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, white 50%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, white 50%);
+        content: " ";
+        display: block;
+        height: 49px;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px; } }
+  .cc-pageNavigation__navigation {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin: 0;
+    padding-right: 1em;
+    width: 100%; }
+    @media screen and (max-width: 1023px) {
+      .cc-pageNavigation__navigation {
+        padding-right: 0; } }
+    @media screen and (max-width: 767px) {
+      .cc-pageNavigation__navigation {
+        -ms-overflow-style: none;
+        overflow-y: scroll;
+        position: relative;
+        scrollbar-width: none;
+        /* Optional: show position indicator in red */ }
+        .cc-pageNavigation__navigation::-webkit-scrollbar {
+          background: transparent;
+          /* Optional: just make scrollbar invisible */
+          height: 0;
+          /* Remove scrollbar space */ }
+        .cc-pageNavigation__navigation::-webkit-scrollbar-thumb {
+          background: transparent; } }
+    .cc-pageNavigation__navigationItem {
+      -webkit-box-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: flex;
+      height: 80px;
+      list-style: none;
+      padding: 0 .5em; }
+      .cc-pageNavigation__navigationItem:first-of-type {
+        padding-left: 0; }
+      .cc-pageNavigation__navigationItem a {
+        color: #030352;
+        display: block;
+        font-size: 0.875rem;
+        font-weight: 700;
+        padding: 0;
+        -webkit-transition: 0.3s;
+        transition: 0.3s; }
+      @media screen and (max-width: 767px) {
+        .cc-pageNavigation__navigationItem {
+          height: auto;
+          white-space: nowrap; }
+          .cc-pageNavigation__navigationItem a {
+            padding: 1em 0; } }
+      .cc-pageNavigation__navigationItem a:hover,
+      .cc-pageNavigation__navigationItem a:focus {
+        color: #0024ec; }
+  .cc-pageNavigation__search {
+    -webkit-box-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: flex; }
+    @media screen and (min-width: 1024px) {
+      .cc-pageNavigation__search {
+        margin-left: auto; } }
+  .cc-pageNavigation[data-sticky="true"] .cc-pageNavigation__wrapper {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 21px 30px -31px;
+    left: 0;
+    padding: 0 1em;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    -webkit-transition: box-shadow .3s;
+    transition: box-shadow .3s;
+    z-index: 1000; }
+    @media screen and (max-width: 1023px) {
+      .cc-pageNavigation[data-sticky="true"] .cc-pageNavigation__wrapper {
+        padding: 0 1em 1em; } }
+    @media screen and (max-width: 767px) {
+      .cc-pageNavigation[data-sticky="true"] .cc-pageNavigation__wrapper {
+        top: 0; } }
+  @media screen and (min-width: 768px) {
+    .cc-pageNavigation[data-sticky="true"] .cc-pageNavigation__navigationItem {
+      height: 70px; } }
+  .cc-pageNavigation:not([data-sticky="true"]) {
+    -webkit-transition: unset;
+    transition: unset; }
+    @media screen and (max-width: 767px) {
+      .cc-pageNavigation:not([data-sticky="true"]) {
+        border-bottom: solid 1px #e4e4e4;
+        box-shadow: 0 11px 12px rgba(214, 214, 214, 0.41); } }
+
+
+        </style>
+
+
+</head>
+
+<body>
+
+
+    <header></header>
+    <script>
+        fetch("./header.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("header").innerHTML = data;
+    if(window.localStorage.getItem("mypitch_user_login_email") == null)
+    {
+        if(data.indexOf("my_pitch_header_option") !== -1)
+        {
+            //console.log("true");
+            document.getElementById("my_pitch_header_option").style.display = "none";
+            document.getElementById("profile_header_display").style.display = "none";
+            document.getElementById("signout_header_display").style.display = "none";
+            document.getElementById("notification_header_display").style.display = "none";
+            document.getElementById("login_header_display").style.display = "block";
+        }
+    }
+  });
+
+    </script>
+
+
+<div class="cc-page cc-page--tax-relief">
+    <div class="row">
+        <div class="column">
+            <div class="cc-masthead cc-masthead--with-bg-color text-left bg-teal" style="">
+                <h1 class="cc-masthead__heading text-navy large">
+                Privacy and cookie policy *
+            </h1>
+                <div class="cc-masthead__cover"></div>
+                <div class="cc-masthead__content">
+                    <div class="cc-masthead__introtext text-navy">
+                        <p><b>GoViddo Limited</b> are committed to protecting and respecting your privacy.</p>
+                        <p><b>Last Update Effective Date:</b> 1 Jan 2020</p>
+                        <p>This privacy policy applies to the website <a href="https://goviddo.com/crowdfund/" targe="_blank">goviddo.com/crowdfunding </a> owned and operated by GoViddo Limited (acting as data controller). This privacy policy describes how GoViddo collects and uses the personal data you provide on <a href="https://goviddo.com/" target="_blank">goviddo.com</a>. It also describes the choices available to you regarding our use of your personal data and how you can access and update this information (see "Your rights" section for more details).</p>
+                    </div>
+                    <div class="cc-masthead__buttons text-navy"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cc-block cc-block--section clearfix">
+        <div class="cc-section ">
+            <a name="" id=""></a>
+            <div class="cc-block cc-block--content clearfix">
+                <div class="row">
+                    <div class="column small-12 large-6">
+                        <div class="row">
+                            <div class="col-12">
+                        <div class="text-left">
+                            <h5>Information we may collect from you</h5>
+                            <p>We may collect and process the following data about you provided at the time of requesting goods, services or information from us:</p>
+                            
+                            <li>Information that you provide to us by filling in forms on our site goviddo.COM and mobile applications ("Our Site"). This includes contact information such as name, email address, mailing address, phone number, financial information such as bank or brokerage account numbers, unique identifiers such as user name, account number, password, date of birth and preferences information such as favourites lists, transaction history, marketing preferences. If you chose to list your company with us, we may ask for information about your business such as company name, company size, business type and personal data such as a professional profile.</li>
+                            
+                            <li>Information that you provide to us when you write to us (including by email).</li>
+                            
+                            <li>Information that you provide to us when we speak to you by telephone. We may make and keep a record of the information you share with us.</li>
+                            
+                            <li>Information that you provide to us by completing surveys.</li>
+                            
+                            <li>Details of transactions you carry out through Our Site and of the fulfillment of your orders.</li>
+                            
+                            <li>Information obtained by us from third parties in accordance with this Privacy Policy. For example, if you chose to list your business with us, we may obtain additional information from credit reference agencies as a supplementary source.</li>
+                            
+                            <p>
+                                As is true of most web sites, we gather certain information automatically and store it in log files. This information includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data. We use this information, to analyse trends, to administer Our Site, to track users’ movements around Our Site and to gather demographic information about our user base as a whole.
+                            </p>
+                            
+                        </div>
+                        </div>
+        
+                        
+                        </div>
+                    </div>
+                    <div class="column small-12 large-6">
+                        <div class="cc-imageBlock cc-imageBlock--styled">
+                            <figure class="cc-image">
+                                <picture class="cc-image__cover"><img class="img-cover" src="img/side_img_1.png" alt="Tax relief main2" style="height:550px;"></picture>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cc-block cc-block--section clearfix">
+        <div class="cc-section ">
+            <a name="" id=""></a>
+            <div class="cc-block cc-block--content clearfix">
+                <div class="row">
+                    <div class="column small-12 large-6">
+                        <div class="cc-imagesBlock cc-imagesBlock--layout-1">
+                            <figure class="cc-image">
+                                <picture class="cc-image__cover"><img class="img-cover" src="img/side_img_1.png" style="height:400px;" alt="SEIS tax relief"></picture>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="column small-12 large-6">
+                        <div class="row">
+                            <div class="col-12">
+                        <div class="text-left">
+                            <h5>Uses made of the information</h5>
+                            <p>We use information held about you in the following ways:</p>
+                           
+                           <li>To ensure that content from Our Site is presented in the most effective manner for you and for your computer. This is in our legitimate business interests.</li>
+                           
+                           <li>To provide you with information, products or services that may be of interest to you, where you have consented to be contacted for such purposes.</li>
+                           
+                           
+                           <li>To carry out our obligations arising from (i) legal obligations and/or (ii) any contracts entered into between you and us to provide information, products or services that you have requested and notify you about changes to our goods and services.</li>
+                           
+                           
+                           <p>If you are an existing customer/member, we may contact you by electronic means (fax, email or SMS) with information about goods and services similar to those which were the subject of a previous sale to you. We will not otherwise contact you by electronic means to provide you with information about goods and services which may be of interest to you, unless you have consented to this. If you do not want us to use your data in one or more of the ways mentioned above, please let us know by contacting us at contact@goviddo.com  or refer to additional instructions in the “Your rights” portion of this policy.</p>
+                            
+                            
+                            
+                        </div>
+                        </div>
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="cc-block cc-block--section clearfix">
+        <div class="cc-section ">
+            <a name="" id=""></a>
+            <div class="cc-block cc-block--content clearfix">
+                <div class="row">
+                    <div class="column small-12 large-6">
+                        <div class="row">
+                            <div class="col-12">
+                        <div class="text-left">
+                            <h5>Disclosure of your information</h5>
+                            <p>We will share your personal data with third parties only in the ways that are described in this privacy policy. We do not sell your personal data to third parties. We may disclose your personal data to any member of our group, which means our subsidiaries, our ultimate holding company and its subsidiaries. In addition to the above, we may disclose your personal data to third parties:</p>
+                            
+                            <li>In the event that we sell or buy any business or assets, in which case we may disclose your personal data to the prospective seller or buyer of such business or assets. You will be notified via email and/or prominent notice on Our Site of any change in ownership or uses of your personal data, as well as any choices you may have regarding your personal data.</li>
+                            <li>If GoViddo or substantially all of its assets are acquired by a third party, in which case personal data held by it about its customers will be one of the transferred assets.</li>
+                            <li>If we are, or believe in good faith that we are, under a duty to disclose or share your personal data in order to comply with any legal obligation; or permitted by law in order to enforce or apply our Terms and Conditions of Website Use and other agreements; or to protect the rights, property, or safety of us, our customers, or others. This includes exchanging information with other companies and organizations for the purposes of fraud protection and credit risk reduction.</li>
+                            <li>If you have made an investment or applied to invest in a company via goviddo.com, your personal data may be disclosed to the company (or the company's professional representatives) that you have invested or applied to invest in. If you request a business plan, Follow a pitch or contact a business or entrepreneur via a pitch page your contact details may also be shared with that business or entrepreneur.</li>
+                            
+                            <p>We may provide your personal data to companies that provide services to help us with our business activities such as shipping your order, processing payments, offering customer services or to improve our business operations. These companies are authorized to use your personal data only as necessary to provide these services to us. We do not disclose information about identifiable individuals to our advertisers, but we may provide them with aggregate information about our users (for example, we may inform them that 500 men aged under 30 have clicked on their advertisement on any given day). We may also use such aggregate information to help advertisers reach the kind of audience they want to target (for example, women in SW1). We may make use of the personal data we have collected from you to enable us to comply with our advertisers' wishes by displaying their advertisements to that target audience.</p>
+                            
+                        </div>
+                        </div>
+                        
+                        
+
+        
+                        
+                        </div>
+                    </div>
+                    <div class="column small-12 large-6">
+                        <div class="cc-imageBlock cc-imageBlock--styled">
+                            <figure class="cc-image">
+                                <picture class="cc-image__cover"><img class="img-cover" src="img/side_img_1.png" alt="Tax relief main2" style="height:400px;"></picture>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cc-block cc-block--section clearfix">
+        <div class="cc-section ">
+            <a name="" id=""></a>
+            <div class="cc-block cc-block--content clearfix">
+                <div class="row">
+                    <div class="column small-12 large-6">
+                        <div class="cc-imagesBlock cc-imagesBlock--layout-1">
+                            <figure class="cc-image">
+                                <picture class="cc-image__cover"><img class="img-cover" src="img/side_img_1.png" style="height:400px;" alt="SEIS tax relief"></picture>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="column small-12 large-6">
+                        <div class="row">
+                        
+                                                 <div class="col-12">
+                        <div class="text-left">
+                            <h5>Your rights</h5>
+                            <p>You have the right to access information that is held about you. To protect your privacy and security, we’ll take reasonable steps to verify your identity before providing copies of any relevant materials. You may be entitled to ask us:</p>
+                            <li>for a copy of your information;</li>
+                            <li>to correct or erase your information;</li>
+                            <li>to restrict or stop the processing information;</li>
+                            <li>to transfer some of this information to other organisations; and</li>
+                            <li>where we have asked for your consent to process your data, to withdraw this consent.</li>
+                            
+                            <p>These rights may be limited in some situations – for example, where we can demonstrate that we have a legal requirement to process your data. In some instances, this may mean that we are able to retain data even if you withdraw your consent. Where we require information to comply with legal or contractual obligations, then provision of such data is mandatory: if such information is not provided, then we will not be able to meet obligations placed on us or manage your transactions on Our Site. In all other cases, provision of requested information is optional. We hope that we can satisfy queries you may have about the way we process your information and resolve any complaints you may have. We encourage you to come to us in the first instance but you are entitled to complain directly to the relevant data protection authority.</p>
+                            
+                        </div>
+                        </div>
+                        
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+    <div class="cc-block cc-block--section clearfix">
+        <div class="cc-section ">
+            <a name="" id=""></a>
+            <div class="cc-block cc-block--content clearfix">
+                <div class="row">
+                    <div class="column small-12 large-12">
+                        <div class="text-left">
+                            <h5>
+                                How to exercise your rights
+                            </h5>
+                            <p>
+                                You can correct, change or delete your information in your member account setting page. You can stop receiving our newsletters or marketing emails by following the unsubscribe instructions included in these emails or accessing the email preferences in your account settings page. Alternatively, or to access any of the other above rights, you can email our Customer Support at contacta@goviddo.com or by contacting us by telephone or postal mail at the contact information listed below.
+                            </p>
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>How long we retain your information</h5>
+                            <p>
+                                We will retain your information for as long as your account is active or as needed to provide you services. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements, which in some cases involving the collection and processing of financial data may require a retention period of 7 years (or longer if required by law).
+                            </p>
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Cookies and tracking technologies</h5>
+                            <p>Technologies such as: cookies, beacons, tags and scripts are used by GoViddo Limited and our partners, including marketing partners affiliates, or analytics service providers and business process service providers. These technologies are used in analysing trends, administering Our Site, tracking users’ movements around Our Site and to gather demographic information about our user base as a whole. We may receive reports based on the use of these technologies by these companies on an individual as well as aggregated basis. We use cookies for to estimate our audience size and usage pattern; to store information about your preferences, and so allow us to customise Our Site according to your individual interests; to speed up your searches, and to recognise you when you return to Our Site. Users can control the use of cookies at the individual browser level. If you reject cookies, you may still use Our Site, but your ability to use some features or areas of Our Site may be limited. We partner with third-party ad networks to either display advertising on Our Site or to manage our advertising on other sites. Our ad network partner uses cookies and web beacons to collect non-personal data about your activities on this and other Web sites to provide you targeted advertising based upon your interests. If you wish to not have this information used for the purpose of serving you targeted ads. Please note this does not opt you out of being served advertising. You will continue to receive generic ads.</p>
+                            
+                            <p>Additionally, we use an ad-publishing service to display 3rd party ads on Our Site. When you view or click on an ad a cookie will be set to help better provide advertisements that may be of interest to you on this and other Web sites. You may opt-out of the use of this cookie by visiting the above tracking preference managers. Local Storage Objects (Flash/HTML5): Third parties with whom we partner to provide certain features on Our Site or to display advertising based upon your Web browsing activity use LSOs such as HTML 5 or Flash to collect and store information. Various browsers may offer their own management tools for removing HTML5 LSOs.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>How we store, process and secure your information</h5>
+                            <p>The data that we collect from you may be transferred to and stored at, a destination inside or outside the European Economic Area ("EEA"). It may also be processed by staff operating inside or outside the EEA who work for us or for one of our suppliers. Such staff maybe engaged in, among other things, the fulfilment of your orders, the processing of your payment details and the provision of support services. Access to your information is limited to those who have a need to manage it. Where your information is transferred from the EEA to a country that is not subject to an adequacy decision by the EU Commission, we will seek to ensure that it is adequately protected by (i) ensuring that EU Commission approved standard contractual clauses, an appropriate Privacy Shield certification or a vendor's Processor Binding Corporate Rules are in place or (ii) relying on derogations (e.g. contractual necessity). A copy of the relevant mechanism can be provided for your review on request, using the contact details provided below.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            <h5>Security</h5>
+                            <p>All information you provide to us via email or Our Site is stored on our secure servers. Where we have given you (or where you have chosen) a password which enables you to access certain parts of Our Site, you are responsible for keeping this password confidential. We ask you not to share a password with anyone. The security of your personal data is important to us. When you enter sensitive information (such as bank account information) on our order forms, we encrypt the transmission of that information using secure socket layer technology (SSL). We follow generally accepted standards to protect the personal data submitted to us, both during transmission and once we receive it. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, we cannot guarantee its absolute security. If you have any questions about security on Our Site, you can contact us at contact@goviddo.com</p>
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Payment security</h5>
+                            <p>All payments made to GoViddo are processed by PayPal. PayPal conforms to the highest level of security.</p>
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Security audits</h5>
+                            <p>We use recognised and accredited third parties to perform regular penetration tests of our platform and also internal networks across our offices. Any output is reviewed and prioritised with high importance.</p>
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>hird party security</h5>
+                            <p>Like many businesses, we use certain third‑parties to support the services we provide to our users. We constantly review the security and suitability of any third parties as part of our ongoing processes.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Staff training</h5>
+                            <p>GoViddo employees are required to undertake cybersecurity awareness training and also acknowledge and be compliant with internal security processes across hardware and software. These are reviewed and updated regularly.</p>
+                            
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Blog / Discussions</h5>
+                            <p>Our Site offers a publicly accessible blog and community discussions. You should be aware that any information you provide in these areas may be read, collected, and used by others who access them. To request removal of your personal data from our blog or community discussions, contact us at contact@goviddo.com In some cases, we may not be able to remove your personal data, in which case we will let you know if we are unable to do so and why.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Referrals</h5>
+                            <p>If you choose to use our referral service to tell a contact about Our Site, we will ask you for your contacts' name and email address. You must have consent from your contact to provide this information to us. We will automatically send your contact a one-time email inviting him or her to visit the site. GoViddo store this information for the sole purpose of sending this one-time email and tracking the success of our referral program. Your contact may contact us at contact@goviddo.com  to request that we remove this information from our database.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Links to 3rd party sites</h5>
+                            <p>
+                                Our Site may, from time to time, contain links to and from the websites of our suppliers, partner networks, advertisers, affiliates and other third parties. If you follow a link to any of these websites, please note that these websites should have their own privacy policies and we do not accept any responsibility or liability for these policies or the content or operation of these websites. Please check these policies and the terms of the websites before you submit any personal data to these websites.
+                            </p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Member directory</h5>
+                            <p>We will list you in our publicly accessible member directory. If you wish to request removal of your information or the deletion of an unauthorised profile from our directory, you can contact us at contact@goviddo.com  .</p>
+                            
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Profiles</h5>
+                            <p>The profile you create on Our Site will be publicly accessible unless otherwise indicated. You may change the privacy settings of your profile through your account portal.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Social Media widgets</h5>
+                            <p>Our Site includes Social Media features, such as the Facebook 'Like' button. These features may collect your IP address, which page you are visiting on Our Site, and may set a cookie to enable the feature to function properly. Social Media features and widgets are either hosted by a third party or hosted directly on Our Site. Your interactions with these features are governed by the privacy policy of the company providing it.</p>
+                            
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Single sign-on</h5>
+                            <p>You can log in to Our Site using the sign-in service such as LinkedIn, Facebook and Google. These services will authenticate your identity and provide you the option to share certain personal data with us such as your name and email address to pre-populate our sign up form. Services like LinkedIn, Facebook and Google may give you the option to post information about your activities on Our Site to your profile page to share with others within your network.</p>
+                            
+                            <br>
+                            <br>
+                            
+                            <h5>Changes to our privacy policy</h5>
+                            <p>We may update this privacy policy to reflect changes to our information practices. If we make any material changes we will notify you by email (sent to the e-mail address specified in your account) or by means of a notice on Our Site prior to the change becoming effective. We encourage you to periodically review this page for the latest information on our privacy practices.</p>
+                            
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+        
+    
+    
+    
+</div>
+
+
+  <footer></footer>
+  
+  <script>
+        fetch("./footer.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+     // console.log(data);
+    document.querySelector("footer").innerHTML = data;
+    
+  });
+
+
+    </script>
+
+
+</body>
+
+  <script>
+
+
+function create_account()
+{
+    var full_name = $('#name_of_account_holder').val();
+    var emailid = $('#email_register').val();
+    var password = $('#password_register').val();
+    var dob = $('#dateof_birth').val();
+    
+    if(emailid != "" & full_name != "" & password != "" & dob != "")
+    {
+    var jsonSend = {"full_name" : full_name, "emailid" : emailid, "password" : password, "dob" : dob, "account_holder_type" : "1"};
+    console.log(jsonSend);
+    
+    $.ajax({
+            type: "POST", //rest Type
+            url: "https://goviddo.online/uploadMyPitchUserDetails",
+            data: jsonSend,
+            success: function (msg) {
+                console.log(msg);
+                if(msg.status == "success")
+                {
+    		        window.localStorage.setItem("mypitch_user_login_email", emailid);
+    		        window.localStorage.setItem("mypitch_user_login_userid", msg.userid);
+    		        $('#loginModal').modal('hide');
+    		        window.location.href = "create_project.html";
+                }
+                else{
+                    document.getElementById("errormsg").innerHTML = msg.message;
+                }
+            }
+    });
+    
+    }
+    
+    
+}
+
+  </script>
+
+</html>

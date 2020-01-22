@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>GoViddo CrowdFund</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
@@ -211,7 +211,7 @@ for(k = 0; k < arrayforLoop.length; k++)
     for (j = 0; j < obj.length; j++) {
         
         
-        var percentShow =  ((obj[j].crowdfund_total_raised * 100 )/ (obj[j].crowdfund_total_target));    
+        var percentShow =  ((obj[j].crowdfund_total_raised * 100 )/ (obj[j].crowdfund_total_target)).toFixed(2);    
         
         var backgroundcolor = '#FF5757';
         
@@ -232,8 +232,8 @@ for(k = 0; k < arrayforLoop.length; k++)
             var Data1 = Data1 + '<div id="catlist_recommndation1" class="scrolling-wrapper">'
                 + '<div class="card">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
-                + '<img src="img/slide1.png" class="card-img-top img-fluid" alt="...">'
-                + '<img src="img/logo_header_invest.png" class= "img-fluid img_overlay">'
+                + '<img src="'+obj[j].crowdfund_project_banner_image+'" class="card-img-top img-fluid" alt="...">'
+                + '<img src="'+obj[j].crowdfund_project_logo+'" class= "img-fluid img_overlay" style="border-radius: 50%;">'
                 + '</a>'
                 + '<div class="card-body margintop_50">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
@@ -272,8 +272,8 @@ for(k = 0; k < arrayforLoop.length; k++)
             
             var Data1 = Data1 + ' <div class="card">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'
-                + '<img src="img/slide1.png" class="card-img-top img-fluid" alt="...">'
-                + '<img src="img/logo_header_invest.png" class= "img-fluid img_overlay">'
+                + '<img src="'+obj[j].crowdfund_project_banner_image+'" class="card-img-top img-fluid" alt="...">'
+                + '<img src="'+obj[j].crowdfund_project_logo+'" class= "img-fluid img_overlay" style="border-radius: 50%;">'
                 + '</a>'
                 + '<div class="card-body margintop_50">'
                 + '<a href="invest_details.html?proid='+obj[j].crowdfund_project_id+'">'

@@ -36,8 +36,6 @@ html {
 }
 
 form #card_number {
-    background-image: url("paypal_demo/css/images.png"), url("paypal_demo/css/images.png");
-    background-position: 2px -121px, 260px -61px;
     background-repeat: no-repeat;
     background-size: 120px 361px, 120px 361px;
     padding-left: 54px;
